@@ -1,0 +1,107 @@
+{
+  "id": "1439357",
+  "name": "资生堂",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1011203",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "2107666",
+      "name": "专柜",
+      "font_class": "home",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "4218750",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e794",
+      "unicode_decimal": 59284
+    },
+    {
+      "icon_id": "4762090",
+      "name": "select",
+      "font_class": "select",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "5186994",
+      "name": "在线客服",
+      "font_class": "livechat",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "5562291",
+      "name": "065-right-arrow",
+      "font_class": "right-arrow",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "6969545",
+      "name": "chat",
+      "font_class": "chat",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "7914894",
+      "name": "小红书",
+      "font_class": "xiaohongshu",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "9277879",
+      "name": "we-chat",
+      "font_class": "we-chat",
+      "unicode": "e70e",
+      "unicode_decimal": 59150
+    },
+    {
+      "icon_id": "9568054",
+      "name": "Account",
+      "font_class": "Account",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "9745442",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "10104415",
+      "name": "pin",
+      "font_class": "pin",
+      "unicode": "e6f0",
+      "unicode_decimal": 59120
+    },
+    {
+      "icon_id": "10227810",
+      "name": "购物袋",
+      "font_class": "gouwudai",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "10231370",
+      "name": "收 藏",
+      "font_class": "wishlist",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    }
+  ]
+}
