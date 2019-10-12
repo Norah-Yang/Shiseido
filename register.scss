@@ -150,7 +150,6 @@ nav .box ul li a{
     background: url(https://www.shiseido.com.cn/on/demandware.static/-/Sites-shiseido_global_cn-Library/default/dw1243bdd5/background-images/account-banner-bg.png) top right no-repeat;
 }
 .contain .regBox{
-    margin-top: 65px;
     h1{
         font-size: 50px;
         margin-left: 6.25%;
@@ -158,6 +157,7 @@ nav .box ul li a{
         line-height: 1;
         letter-spacing: 2px;
         padding: 0 10px;
+        padding-top: 70px;
     }
     span{
         margin-left: 7%;
@@ -175,11 +175,14 @@ nav .box ul li a{
         padding-left: 16px;
     }
 }
-.regForm{
-    margin-top: 80px;
+.regForm{    
+    margin-top: 58px;
     margin-left: 6.25%;
     width: 52%;
-    padding:0 10px 0;
+}
+.formRow{
+    padding:22.5px 10px;
+    // width: 50%;
     span{
         color:black;
         line-height: 1;
@@ -187,10 +190,28 @@ nav .box ul li a{
     }
     .required{
         color: #c8102e;
+        letter-spacing: .4px;
     }
     .inputText{
         padding: 14px 18px 15px;
         margin-top: 22.5px;
-        width: 50%;
+        width: 280px;
+        border: 1px solid #ccc;
+    }
+    .verCode{
+        width: 150px;
+        margin-right: 8px;
+    }
+    .regBtn{
+        height: 50px;
+        width: 150px;
+        background: rgb(102,102,102);
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+        border: none;
+    }
+    .form1{
+        float: left;
     }
 }

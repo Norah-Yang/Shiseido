@@ -145,18 +145,18 @@ nav .box ul li a {
   height: 600px;
   background: url(https://www.shiseido.com.cn/on/demandware.static/-/Sites-shiseido_global_cn-Library/default/dw1243bdd5/background-images/account-banner-bg.png) top right no-repeat; }
 
-.contain .regBox {
-  margin-top: 65px; }
-  .contain .regBox h1 {
-    font-size: 50px;
-    margin-left: 6.25%;
-    margin-bottom: 64px;
-    line-height: 1;
-    letter-spacing: 2px;
-    padding: 0 10px; }
-  .contain .regBox span {
-    margin-left: 7%;
-    font-size: 18px; }
+.contain .regBox h1 {
+  font-size: 50px;
+  margin-left: 6.25%;
+  margin-bottom: 64px;
+  line-height: 1;
+  letter-spacing: 2px;
+  padding: 0 10px;
+  padding-top: 70px; }
+
+.contain .regBox span {
+  margin-left: 7%;
+  font-size: 18px; }
 
 .contain .regVip {
   margin-left: 7%; }
@@ -169,17 +169,34 @@ nav .box ul li a {
     padding-left: 16px; }
 
 .regForm {
-  margin-top: 80px;
+  margin-top: 58px;
   margin-left: 6.25%;
-  width: 52%;
-  padding: 0 10px 0; }
-  .regForm span {
+  width: 52%; }
+
+.formRow {
+  padding: 22.5px 10px; }
+  .formRow span {
     color: black;
     line-height: 1;
     font-size: 18px; }
-  .regForm .required {
-    color: #c8102e; }
-  .regForm .inputText {
+  .formRow .required {
+    color: #c8102e;
+    letter-spacing: .4px; }
+  .formRow .inputText {
     padding: 14px 18px 15px;
     margin-top: 22.5px;
-    width: 50%; }
+    width: 280px;
+    border: 1px solid #ccc; }
+  .formRow .verCode {
+    width: 150px;
+    margin-right: 8px; }
+  .formRow .regBtn {
+    height: 50px;
+    width: 150px;
+    background: #666666;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    border: none; }
+  .formRow .form1 {
+    float: left; }

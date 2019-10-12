@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/clickCheck.css">
     <title>会员注册</title>
 </head>
 <body>
@@ -106,11 +107,59 @@
             <li>-&nbsp;&nbsp;&nbsp;收藏您喜爱的产品、文章</li>
         </ul>
     </div>
-    <form action="" method="POST" class="regForm">
-        <span>手机</span>
-        <span class="required">*</span><br>
-        <input type="text" class="inputText">
+
+    <form action="" class="regForm">
+        <div class="formRow">
+            <span>手机</span>
+            <span class="required">*</span>
+            <br>
+            <input type="text" class="inputText">
+        </div>
+        <div class="formRow">
+                <span>姓名</span>
+                <span class="required">*</span>
+                <br>
+                <input type="text" class="inputText">
+        </div>
+        <div class="widgets__img_check_box" id="select" style="width:400px;top:2px;">
+            <p>拖动下方滑块完成拼图</p>                       
+                <div class="widgets__img_display">
+                    <div class="widgets__img_cnt">
+                        <img src1="a.jpg" class="widgets__img_src" />
+                        <canvas class="widgets__img_fragment_hollow"></canvas>
+                        <div class="widgets__img_fragment_cnt">
+                            <canvas class="widgets__img_fragment widgets__img_fragment_shadow"></canvas>
+                            <canvas class="widgets__img_fragment widgets__img_fragment_content"></canvas>
+                        </div>
+                        <div class="widgets__icon_refresh"></div>
+                    </div>                
+                </div>            
+                <div class="widgets__smooth_cnt">
+                    <div class="widgets__smooth_bar"></div>
+                    <div class="widgets__smooth_circle"></div>
+                </div>
+        </div>
+        <div class="formRow">
+                <span>短信验证码</span>
+                <span class="required">*</span>
+                <br>
+                <input type="text" class="inputText verCode">
+               <input type="button" value="获取短信验证码" class="regBtn">
+        </div>
+        <div class="formRow">
+                <span>密码</span>
+                <span class="required">*</span>
+                <br>
+                <input type="text" class="inputText">
+        </div>
+        <div class="formRow form1">
+                <span>确认密码</span>
+                <span class="required">*</span>
+                <br>
+                <input type="text" class="inputText">
+        </div>
     </form>
+
 </div>
 
 
@@ -118,3 +167,24 @@
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/clickCheck.js"></script>
+<script type="text/javascript">   
+    var s = WIDGETS.imgSmoothCheck({
+        selector: "#select",
+        data: ["img/t1.jpg", "img/t2.jpg", "img/t3.jpg"],
+        imgHeight: 200,
+        imgWidth: 320,
+        allowableErrorValue: 3,
+        success: function () {
+            alert('验证成功');
+            $(".widgets__img_check_box").remove();
+        },
+
+        error: function (res) {
+            alert('请重试');
+        }
+    });
+    $(".refresh").on("click", function () {
+        s.refresh();
+    });
+    </script>
