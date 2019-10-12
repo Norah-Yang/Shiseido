@@ -73,8 +73,6 @@ $(document).ready(function(){
 })
 
 
-
-
 $(".li4").hover(function(){
     $(".ul2").show().html(
         `<a href="#">卸妆洁面</a><br>
@@ -165,3 +163,5 @@ $(".li10").hover(function(){
 },function(){
     $(".ul2").hide();
 })
+
+

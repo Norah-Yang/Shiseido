@@ -1,5 +1,3 @@
-
-
 // $(".img1").hover(
 //     function () {
 //       $(".img1 img").attr("src","img/img2_1.jpg");

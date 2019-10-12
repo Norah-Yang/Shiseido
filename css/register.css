@@ -170,9 +170,16 @@ nav .box ul li a {
 
 .regForm {
   margin-top: 80px;
-  margin-left: 6.25%; }
+  margin-left: 6.25%;
+  width: 52%;
+  padding: 0 10px 0; }
   .regForm span {
+    color: black;
+    line-height: 1;
+    font-size: 18px; }
+  .regForm .required {
     color: #c8102e; }
-
-.box3 {
-  margin: 0 20px 0; }
+  .regForm .inputText {
+    padding: 14px 18px 15px;
+    margin-top: 22.5px;
+    width: 50%; }
