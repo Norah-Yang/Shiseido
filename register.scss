@@ -205,10 +205,17 @@ nav .box ul li a{
             height: 50px;
             width: 150px;
             background: rgb(102,102,102);
+            border: 1px solid rgb(102,102,102);
             font-size: 18px;
-            font-weight: bolder;
-            color: white;
             border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                font-weight: bolder;
+                color: white;
+                cursor: default;
+            }
         }
         .form1{
             float: left;
@@ -219,4 +226,3 @@ nav .box ul li a{
         color: #888888;
         font-size: 14px;
     }
-

@@ -144,7 +144,10 @@
                 <span class="required">*</span>
                 <br>
                 <input type="text" class="inputText verCode">
-               <input type="button" value="获取短信验证码" class="regBtn">
+                <div class="regBtn">
+                    <a href="#">获取短信验证码</a>
+                </div>
+               
         </div>
         <div class="formRow">
                 <span>密码</span>
@@ -159,6 +162,7 @@
                 <input type="text" class="inputText">                
         </div>
         <p>*最少8个字符，至少包含1个数字，1个英文字符</p>
+        
     </form>
 
 </div>
@@ -179,10 +183,26 @@
         success: function () {
             alert('验证成功');
             $(".widgets__img_check_box").remove();
-            $(".regBtn".css({
-
-            })
-            )
+            $(".regBtn").css({
+                'background':'black',
+                'color':'white',
+                'font-weight':'700'
+            });
+            $(".regBtn a").css({'cursor':'pointer'});
+            $(".regBtn").hover(
+                function () {
+                    $(".regBtn").css({
+                        'background':'white',
+                        'border':'1px solid black'});
+                    $(".regBtn a").css({'color':'black'});
+                },
+                function () {
+                    $(".regBtn").css({'background':'black'});
+                    $(".regBtn a").css({'color':'white'});
+                }
+                
+            );
+            
         },
 
         error: function (res) {
