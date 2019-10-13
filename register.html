@@ -156,8 +156,9 @@
                 <span>确认密码</span>
                 <span class="required">*</span>
                 <br>
-                <input type="text" class="inputText">
+                <input type="text" class="inputText">                
         </div>
+        <p>*最少8个字符，至少包含1个数字，1个英文字符</p>
     </form>
 
 </div>
@@ -178,6 +179,10 @@
         success: function () {
             alert('验证成功');
             $(".widgets__img_check_box").remove();
+            $(".regBtn".css({
+
+            })
+            )
         },
 
         error: function (res) {

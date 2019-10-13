@@ -179,39 +179,44 @@ nav .box ul li a{
     margin-top: 58px;
     margin-left: 6.25%;
     width: 52%;
-}
-.formRow{
-    padding:22.5px 10px;
-    // width: 50%;
-    span{
-        color:black;
-        line-height: 1;
-        font-size: 18px;
+    .formRow{
+        padding:22.5px 10px;
+        // width: 50%;
+        span{
+            color:black;
+            line-height: 1;
+            font-size: 18px;
+        }
+        .required{
+            color: #c8102e;
+            letter-spacing: .4px;
+        }
+        .inputText{
+            padding: 14px 18px 15px;
+            margin-top: 22.5px;
+            width: 280px;
+            border: 1px solid #ccc;
+        }
+        .verCode{
+            width: 150px;
+            margin-right: 8px;
+        }
+        .regBtn{
+            height: 50px;
+            width: 150px;
+            background: rgb(102,102,102);
+            font-size: 18px;
+            font-weight: bolder;
+            color: white;
+            border: none;
+        }
+        .form1{
+            float: left;
+        }
+    } 
+}   
+    p{
+        color: #888888;
+        font-size: 14px;
     }
-    .required{
-        color: #c8102e;
-        letter-spacing: .4px;
-    }
-    .inputText{
-        padding: 14px 18px 15px;
-        margin-top: 22.5px;
-        width: 280px;
-        border: 1px solid #ccc;
-    }
-    .verCode{
-        width: 150px;
-        margin-right: 8px;
-    }
-    .regBtn{
-        height: 50px;
-        width: 150px;
-        background: rgb(102,102,102);
-        font-size: 18px;
-        font-weight: bolder;
-        color: white;
-        border: none;
-    }
-    .form1{
-        float: left;
-    }
-}
+

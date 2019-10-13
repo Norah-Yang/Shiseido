@@ -172,31 +172,34 @@ nav .box ul li a {
   margin-top: 58px;
   margin-left: 6.25%;
   width: 52%; }
+  .regForm .formRow {
+    padding: 22.5px 10px; }
+    .regForm .formRow span {
+      color: black;
+      line-height: 1;
+      font-size: 18px; }
+    .regForm .formRow .required {
+      color: #c8102e;
+      letter-spacing: .4px; }
+    .regForm .formRow .inputText {
+      padding: 14px 18px 15px;
+      margin-top: 22.5px;
+      width: 280px;
+      border: 1px solid #ccc; }
+    .regForm .formRow .verCode {
+      width: 150px;
+      margin-right: 8px; }
+    .regForm .formRow .regBtn {
+      height: 50px;
+      width: 150px;
+      background: #666666;
+      font-size: 18px;
+      font-weight: bolder;
+      color: white;
+      border: none; }
+    .regForm .formRow .form1 {
+      float: left; }
 
-.formRow {
-  padding: 22.5px 10px; }
-  .formRow span {
-    color: black;
-    line-height: 1;
-    font-size: 18px; }
-  .formRow .required {
-    color: #c8102e;
-    letter-spacing: .4px; }
-  .formRow .inputText {
-    padding: 14px 18px 15px;
-    margin-top: 22.5px;
-    width: 280px;
-    border: 1px solid #ccc; }
-  .formRow .verCode {
-    width: 150px;
-    margin-right: 8px; }
-  .formRow .regBtn {
-    height: 50px;
-    width: 150px;
-    background: #666666;
-    font-size: 18px;
-    font-weight: bolder;
-    color: white;
-    border: none; }
-  .formRow .form1 {
-    float: left; }
+p {
+  color: #888888;
+  font-size: 14px; }
