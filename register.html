@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/clickCheck.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>会员注册</title>
 </head>
 <body>
@@ -144,25 +145,37 @@
                 <span class="required">*</span>
                 <br>
                 <input type="text" class="inputText verCode">
-                <div class="regBtn">
+                <div class="regBtn ">
                     <a href="#">获取短信验证码</a>
+                    <div class="overburden">
+                        <a href="#" class="overburden-btn overburden-btn-1 overburden-btn-1b" target="_blank">获取短信验证码</a>
+                    </div>
                 </div>
-               
+            
         </div>
-        <div class="formRow">
-                <span>密码</span>
-                <span class="required">*</span>
-                <br>
-                <input type="text" class="inputText">
-        </div>
-        <div class="formRow form1">
-                <span>确认密码</span>
-                <span class="required">*</span>
-                <br>
-                <input type="text" class="inputText">                
+        <div class="form1">
+            <div class="formRow">
+                    <span>密码</span>
+                    <span class="required">*</span>
+                    <br>
+                    <input type="text" class="inputText">
+            </div>
+            <div class="formRow">
+                    <span>确认密码</span>
+                    <span class="required">*</span>
+                    <br>
+                    <input type="text" class="inputText">                
+            </div>
         </div>
         <p>*最少8个字符，至少包含1个数字，1个英文字符</p>
-        
+        <label for="" class="formCheck"><input type="checkbox">我同意收集和处理我的个人数据将符合资生堂
+            <a href="#">隐私政策</a>，并且我同意我对本网站的使用将遵守这些<br> <a href="#">条款和条件</a>.
+        </label>
+        <div class="centerer">
+            <div class="wrap">
+                <a class="btn-0" href="#" type="submit">立即注册</a>
+            </div>
+        </div>
     </form>
 
 </div>
@@ -173,6 +186,7 @@
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/clickCheck.js"></script>
+<script src='js/jquery.min.js'></script>
 <script type="text/javascript">   
     var s = WIDGETS.imgSmoothCheck({
         selector: "#select",
@@ -184,9 +198,8 @@
             alert('验证成功');
             $(".widgets__img_check_box").remove();
             $(".regBtn").css({
-                'background':'black',
-                'color':'white',
-                'font-weight':'700'
+                'background':'white',
+                'color':'black'
             });
             $(".regBtn a").css({'cursor':'pointer'});
             $(".regBtn").hover(
@@ -199,10 +212,8 @@
                 function () {
                     $(".regBtn").css({'background':'black'});
                     $(".regBtn a").css({'color':'white'});
-                }
-                
-            );
-            
+                }                
+            );            
         },
 
         error: function (res) {
@@ -213,3 +224,6 @@
         s.refresh();
     });
     </script>
+<script>
+
+</script>

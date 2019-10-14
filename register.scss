@@ -181,7 +181,7 @@ nav .box ul li a{
     width: 52%;
     .formRow{
         padding:22.5px 10px;
-        // width: 50%;
+        width: 50%;
         span{
             color:black;
             line-height: 1;
@@ -198,31 +198,110 @@ nav .box ul li a{
             border: 1px solid #ccc;
         }
         .verCode{
-            width: 150px;
-            margin-right: 8px;
-        }
-        .regBtn{
-            height: 50px;
-            width: 150px;
-            background: rgb(102,102,102);
-            border: 1px solid rgb(102,102,102);
-            font-size: 18px;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            a{
-                font-weight: bolder;
-                color: white;
-                cursor: default;
-            }
-        }
-        .form1{
-            float: left;
+            width: 110px;
+            margin-right: 13px;
         }
     } 
+    .form1{
+        // display: flex;
+    }
+    .formCheck{
+       color: #888888;
+       font-size: 14px;
+       input{
+           zoom: 200%;
+       }
+       a{
+           color: #888888;
+           text-decoration: underline;
+       }
+       a:hover{
+           opacity: .7;
+       }
+    }
+    
+    .regBtn{
+        height: 48px;
+        width: 150px;
+        background: #999999;
+        border: 1px solid #999999;
+        font-size: 18px;
+        display: inline-block;
+        position: relative;
+        a{
+            font-weight: bolder;
+            color: black;
+            line-height: 48px;
+            cursor: default;
+            padding-left: 12px;
+        }
+    }
 }   
     p{
         color: #888888;
         font-size: 14px;
+        padding: 0 10px 17.5px;
     }
+    .overburden{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 50px;
+        z-index: 10;
+        display: none;
+
+    }
+    // .overburden p {
+    //     position: relative;
+    //     margin: 0;
+    //     padding: 1em;
+    //     z-index: 1;
+    // }
+    // .overburden-btn {
+    //     border: 1px solid black;
+    //     font-family: inherit;
+    //     font-size: inherit;
+    //     color: inherit;
+    //     background:none;
+    //     cursor: pointer;
+    //     font-weight: bold;
+    //     height: 48px;
+    //     line-height: 48px;
+    //     width: 138px;
+    //     font-size: 18px;
+    //     display: inline-block;
+    //     font-weight: 700;
+    //     outline: none;
+    //     position: relative;
+    //     -webkit-transition: all 0.3s;
+    //     -moz-transition: all 0.3s;
+    //     transition: all 0.3s;
+    // }
+    // .overburden-btn-1 {
+    //     color: black;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    // }
+    // .overburden-btn-1b:hover, .overburden-btn-1b:active {
+    //     color: white;
+    // }
+    // .overburden-btn-1b:hover:after, .overburden-btn-1b:active:after {
+    //     width: 100%;
+    // }
+    // .overburden-btn:after {
+    //     content: '';
+    //     position: absolute;
+    //     z-index: -1;
+    //     -webkit-transition: all 0.3s;
+    //     -moz-transition: all 0.3s;
+    //     transition: all 0.3s;
+    // }
+    // .overburden-btn-1b:after {
+    //     height: 100%;
+    //     width: 0;
+    //     top: 0;
+    //     left: 0;
+    //     background: black;
+    // }

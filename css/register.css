@@ -173,7 +173,8 @@ nav .box ul li a {
   margin-left: 6.25%;
   width: 52%; }
   .regForm .formRow {
-    padding: 22.5px 10px; }
+    padding: 22.5px 10px;
+    width: 50%; }
     .regForm .formRow span {
       color: black;
       line-height: 1;
@@ -187,25 +188,43 @@ nav .box ul li a {
       width: 280px;
       border: 1px solid #ccc; }
     .regForm .formRow .verCode {
-      width: 150px;
-      margin-right: 8px; }
-    .regForm .formRow .regBtn {
-      height: 50px;
-      width: 150px;
-      background: #666666;
-      border: 1px solid #666666;
-      font-size: 18px;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .regForm .formRow .regBtn a {
-        font-weight: bolder;
-        color: white;
-        cursor: default; }
-    .regForm .formRow .form1 {
-      float: left; }
+      width: 110px;
+      margin-right: 13px; }
+  .regForm .formCheck {
+    color: #888888;
+    font-size: 14px; }
+    .regForm .formCheck input {
+      zoom: 200%; }
+    .regForm .formCheck a {
+      color: #888888;
+      text-decoration: underline; }
+    .regForm .formCheck a:hover {
+      opacity: .7; }
+  .regForm .regBtn {
+    height: 48px;
+    width: 150px;
+    background: #999999;
+    border: 1px solid #999999;
+    font-size: 18px;
+    display: inline-block;
+    position: relative; }
+    .regForm .regBtn a {
+      font-weight: bolder;
+      color: black;
+      line-height: 48px;
+      cursor: default;
+      padding-left: 12px; }
 
 p {
   color: #888888;
-  font-size: 14px; }
+  font-size: 14px;
+  padding: 0 10px 17.5px; }
+
+.overburden {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 50px;
+  z-index: 10;
+  display: none; }
