@@ -180,8 +180,8 @@
         </label>
         <div class="centerer">
             <div class="wrap">
-                <!-- <a class="btn-0" href="#" type="submit" id="btn">立即注册</a> -->
-                <button class="btn-0" type="button" id="btn">立即注册</button>
+                <a class="btn-0" href="#" type="submit" id="btn">立即注册</a>
+                <!-- <button class="btn-0" type="button" id="btn">立即注册</button> -->
             </div>
         </div>
         <div id="messageBox"></div>
@@ -310,77 +310,81 @@
     </div>
 </body>
 </html>
-<!-- <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script> -->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- <script type="text/javascript" src="js/jquery-1.8.3.js"></script> -->
-<!-- <script src="js/nav.js"></script> -->
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script src="js/nav.js"></script>
 <script src="js/clickCheck.js"></script>
-<!-- <script src='js/jquery.min.js'></script> -->
-<!-- <script src="js/register.js"></script> -->
+<script src='js/jquery.min.js'></script>
+<script src="js/register.js"></script>
 
 <script>
 
-        $("#btn").onclick = function(){
-            //1、
-            let xhr = new XMLHttpRequest();
+
+
+
+
+        // $("#btn").onclick = function(){
+        //     //1、
+        //     let xhr = new XMLHttpRequest();
         
-            xhr.open("post","regSave.php",true);
+        //     xhr.open("post","regSave.php",true);
         
-            xhr.onreadystatechange = function(){
-                alert("0");
-                if(xhr.readyState==4 && xhr.status==200){
-                    if(xhr.responseText=="-1"){
-                        alert("1");
-                        $("#messageBox").style.color ="red";
-                        $("#messageBox").innerHTML ="该手机号已被注册";
-                    }else if(xhr.responseText=="0"){
-                        $("#messageBox").style.color ="red";
-                        $("#messageBox").innerHTML ="注册失败";
-                        alert("2");
-                    }else if(xhr.responseText=="1"){
-                        alert("3");
-                        $("#messageBox").style.color ="green";
-                        $("#messageBox").innerHTML ="注册成功，请<a href='login.html'>登录</a>";
-                    }
-                }
-            }
-            //post方式：设置请求头
-            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
-            let sendstr = `userTel=${$("#userTel").value}&userpass=${$("#userpass").value}`;
+        //     xhr.onreadystatechange = function(){
+        //         alert("0");
+        //         if(xhr.readyState==4 && xhr.status==200){
+        //             if(xhr.responseText=="-1"){
+        //                 alert("1");
+        //                 $("#messageBox").style.color ="red";
+        //                 $("#messageBox").innerHTML ="该手机号已被注册";
+        //             }else if(xhr.responseText=="0"){
+        //                 $("#messageBox").style.color ="red";
+        //                 $("#messageBox").innerHTML ="注册失败";
+        //                 alert("2");
+        //             }else if(xhr.responseText=="1"){
+        //                 alert("3");
+        //                 $("#messageBox").style.color ="green";
+        //                 $("#messageBox").innerHTML ="注册成功，请<a href='login.html'>登录</a>";
+        //             }
+        //         }
+        //     }
+        //     //post方式：设置请求头
+        //     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        //     //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
+        //     let sendstr = `userTel=${$("#userTel").value}&userpass=${$("#userpass").value}`;
             
-            xhr.send(sendstr);
+        //     xhr.send(sendstr);
         
-        }
+        // }
         
     
         
         
         
-        function check(){
-            //非空判断：
-            if($("#userTel").value=="" || $("#userpass").value=="" || $("#userId").value==""){
-                alert("亲，请把带星号的都输入了");
-                return false;//阻止浏览器的默认行为
-            }
-            //判断用户名是否符合规则
+        // function check(){
+        //     //非空判断：
+        //     if($("#userTel").value=="" || $("#userpass").value=="" || $("#userId").value==""){
+        //         alert("亲，请把带星号的都输入了");
+        //         return false;//阻止浏览器的默认行为
+        //     }
+        //     //判断用户名是否符合规则
         
-            //判断密码和重复密码是否一致。
+        //     //判断密码和重复密码是否一致。
         
             
-        }
+        // }
         
-        function $(str){
-            if(str.charAt(0)=="#"){
-                return document.getElementById(str.substring(1));
-            }else if(str.charAt(0)=="."){
-                return document.getElementsByClassName(str.substring(1));
-            }else{
-                return document.getElementsByTagName(str);
-            }
-        }	
+        // function $(str){
+        //     if(str.charAt(0)=="#"){
+        //         return document.getElementById(str.substring(1));
+        //     }else if(str.charAt(0)=="."){
+        //         return document.getElementsByClassName(str.substring(1));
+        //     }else{
+        //         return document.getElementsByTagName(str);
+        //     }
+        // }	
         
         </script>

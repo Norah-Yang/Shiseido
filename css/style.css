@@ -59,6 +59,10 @@ html span {
   width: 145px;
   margin: 12px;
 }
+.btn-2 {
+  width: 412px;
+  margin: 12px;
+}
 .btn-0:before {
   content: '';
   position: absolute;

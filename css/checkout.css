@@ -1,0 +1,245 @@
+@charset "UTF-8";
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, hr, td, input, textarea {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: "微软雅黑"; }
+
+/*!
+* nav
+*/
+.navMain {
+  width: 100%;
+  background: #000000; }
+
+nav {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  position: relative; }
+
+nav img {
+  margin-top: 27px; }
+
+.logo {
+  width: 386px;
+  height: 100px; }
+
+.navCon {
+  width: 1030px;
+  height: 100px;
+  display: flex; }
+
+.main {
+  background: black;
+  width: 628px;
+  color: white;
+  position: relative; }
+
+.main .ul1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.main .ul1 li {
+  list-style: none;
+  line-height: 50px; }
+
+.main .ul1 li a {
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+  line-height: 100px; }
+
+.main .ul1 li a:hover {
+  border-bottom: 4px solid #c8102e; }
+
+nav .box {
+  width: 100%;
+  height: 700px;
+  z-index: 20;
+  position: absolute;
+  top: 100px;
+  background: black;
+  display: none;
+  cursor: default; }
+
+nav .box ul li a {
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  line-height: 100px; }
+
+.icon {
+  width: 345px;
+  height: 30px; }
+
+.icon ul {
+  float: right;
+  margin-right: 15px; }
+
+.icon li {
+  height: 20px;
+  width: 20px;
+  float: left;
+  padding: 0 1px 0;
+  margin: 0 10px; }
+
+.icon a span {
+  color: white;
+  font-size: 20px;
+  line-height: 100px; }
+
+.icon a:hover {
+  text-decoration: none; }
+
+.navMain .box ul {
+  margin-left: 380px;
+  margin-top: 80px; }
+
+.navMain .box ul li {
+  font-size: 30px;
+  color: white;
+  display: inline-block;
+  line-height: 50px; }
+
+.navMain .box ul li:hover {
+  border-bottom: 4px solid #c8102e;
+  font-weight: bold; }
+
+.navMain .box3 ul li:hover {
+  border-bottom: none;
+  font-weight: bold; }
+
+.navMain .box .ul2 {
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  top: 0;
+  margin-left: 50%; }
+
+.navMain .box .ul2 a:hover {
+  font-weight: 100; }
+
+.navMain .box .ul2 a {
+  color: white;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 100; }
+
+/*!
+* contain
+*/
+.contain {
+  width: 100%;
+  background: url(https://www.shiseido.com.cn/on/demandware.static/-/Sites-shiseido_global_cn-Library/default/dw1243bdd5/background-images/account-banner-bg.png) top right no-repeat; }
+
+.loginWrap {
+  margin-left: 6.25%;
+  width: 93.75%;
+  margin-top: 50px; }
+  .loginWrap .left {
+    width: 40%; }
+    .loginWrap .left h1 {
+      color: black;
+      font-size: 50px;
+      margin-bottom: 50px; }
+    .loginWrap .left .loginForm {
+      width: 432px;
+      padding: 0 10px; }
+      .loginWrap .left .loginForm .formRow {
+        padding: 22.5px 10px; }
+        .loginWrap .left .loginForm .formRow span {
+          color: black;
+          line-height: 1;
+          font-size: 18px; }
+        .loginWrap .left .loginForm .formRow .required {
+          color: #c8102e;
+          letter-spacing: .4px; }
+        .loginWrap .left .loginForm .formRow .inputText {
+          margin-top: 15px;
+          width: 410px;
+          height: 50px;
+          border: 1px solid #ccc; }
+        .loginWrap .left .loginForm .formRow .formCheck {
+          color: #888888;
+          font-size: 14px; }
+          .loginWrap .left .loginForm .formRow .formCheck input {
+            zoom: 200%; }
+        .loginWrap .left .loginForm .formRow button {
+          border: 1px solid #000;
+          width: 100%; }
+      .loginWrap .left .loginForm .formRow1 {
+        display: flex;
+        align-items: center; }
+      .loginWrap .left .loginForm .rememberme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .loginWrap .left .loginForm .rememberme .forget a {
+          color: black;
+          font-size: 18px;
+          font-weight: normal;
+          text-decoration: underline;
+          border: none; }
+    .loginWrap .left .login {
+      margin-top: 1px;
+      padding: 30px 10px 0; }
+
+[type=button].primary.large, [type=reset].primary.large, [type=submit].primary.large, a.button.primary.large, button.primary.large {
+  height: 48px;
+  padding: 0;
+  line-height: 48px;
+  min-width: 200px; }
+
+[type=button].primary.active, [type=button].primary:active, [type=button].primary:hover, [type=reset].primary.active, [type=reset].primary:active, [type=reset].primary:hover, [type=submit].primary.active, [type=submit].primary:active, [type=submit].primary:hover, a.button.primary.active, a.button.primary:active, a.button.primary:hover, button.primary.active, button.primary:active, button.primary:hover {
+  color: #000; }
+
+[type=button].primary, [type=reset].primary, [type=submit].primary, a.button.primary, button.primary {
+  color: #fff;
+  position: relative;
+  background: 0 0;
+  font-weight: 700; }
+
+[type=button], [type=reset], [type=submit], a.button, button {
+  cursor: pointer;
+  line-height: .86;
+  font-size: 20px;
+  background: #fff;
+  text-align: center;
+  letter-spacing: 1.4px;
+  border: 1px solid #000;
+  font-family: "Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+[type=button].primary:before, [type=reset].primary:before, [type=submit].primary:before, a.button.primary:before, button.primary:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+[type=button].primary::after, [type=reset].primary::after, [type=submit].primary::after, a.button.primary::after, button.primary::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width .3s ease; }
