@@ -142,18 +142,21 @@ nav .box ul li a {
 */
 .contain {
   width: 100%;
+  padding-bottom: 230px;
   background: url(https://www.shiseido.com.cn/on/demandware.static/-/Sites-shiseido_global_cn-Library/default/dw1243bdd5/background-images/account-banner-bg.png) top right no-repeat; }
 
 .loginWrap {
   margin-left: 6.25%;
   width: 93.75%;
-  margin-top: 50px; }
+  display: flex;
+  padding-top: 50px; }
   .loginWrap .left {
     width: 40%; }
     .loginWrap .left h1 {
       color: black;
       font-size: 50px;
-      margin-bottom: 50px; }
+      margin-bottom: 50px;
+      line-height: 50px; }
     .loginWrap .left .loginForm {
       width: 432px;
       padding: 0 10px; }
@@ -192,9 +195,56 @@ nav .box ul li a {
           font-weight: normal;
           text-decoration: underline;
           border: none; }
-    .loginWrap .left .login {
-      margin-top: 1px;
-      padding: 30px 10px 0; }
+    .loginWrap .left .loginOauth {
+      width: 412px;
+      height: 128px;
+      margin: 7.5px 10px 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc; }
+      .loginWrap .left .loginOauth p {
+        margin-top: 25px;
+        font-size: 18px; }
+      .loginWrap .left .loginOauth ul {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-around; }
+      .loginWrap .left .loginOauth a {
+        width: 36px;
+        height: 36px;
+        background: pink; }
+      .loginWrap .left .loginOauth span {
+        font-size: 36px; }
+  .loginWrap .right {
+    width: 40%;
+    float: right; }
+    .loginWrap .right h1 {
+      color: black;
+      font-size: 50px;
+      margin-bottom: 72.5px;
+      line-height: 50px; }
+    .loginWrap .right span {
+      font-size: 18px; }
+    .loginWrap .right .accountWrap {
+      margin-bottom: 170px; }
+      .loginWrap .right .accountWrap span {
+        display: inline-block;
+        text-indent: 16px;
+        margin: 12px 0; }
+    .loginWrap .right .button {
+      display: inline-block;
+      width: 412px;
+      height: 48px;
+      z-index: 2; }
+
+.footer {
+  width: 100%;
+  height: 85px;
+  background: black; }
+  .footer p {
+    font-size: 18px;
+    color: white;
+    line-height: 85px;
+    text-align: center; }
 
 [type=button].primary.large, [type=reset].primary.large, [type=submit].primary.large, a.button.primary.large, button.primary.large {
   height: 48px;
@@ -203,7 +253,8 @@ nav .box ul li a {
   min-width: 200px; }
 
 [type=button].primary.active, [type=button].primary:active, [type=button].primary:hover, [type=reset].primary.active, [type=reset].primary:active, [type=reset].primary:hover, [type=submit].primary.active, [type=submit].primary:active, [type=submit].primary:hover, a.button.primary.active, a.button.primary:active, a.button.primary:hover, button.primary.active, button.primary:active, button.primary:hover {
-  color: #000; }
+  color: #000;
+  background: white; }
 
 [type=button].primary, [type=reset].primary, [type=submit].primary, a.button.primary, button.primary {
   color: #fff;
