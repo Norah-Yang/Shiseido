@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+     <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+     
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/clickCheck.css">
@@ -109,18 +115,18 @@
         </ul>
     </div>
 
-    <form action="" class="regForm">
+    <form action="regSave.php" class="regForm">
         <div class="formRow">
             <span>手机</span>
             <span class="required">*</span>
             <br>
-            <input type="text" class="inputText">
+            <input type="text" id="userTel" name="userTel" class="inputText"  ><span style="font-size: 12px;"></span>
         </div>
         <div class="formRow">
                 <span>姓名</span>
                 <span class="required">*</span>
                 <br>
-                <input type="text" class="inputText">
+                <input type="text" id="userId" name="userId" class="inputText">
         </div>
         <div class="widgets__img_check_box" id="select" style="width:400px;top:2px;">
             <p>拖动下方滑块完成拼图</p>                       
@@ -144,11 +150,12 @@
                 <span>短信验证码</span>
                 <span class="required">*</span>
                 <br>
-                <input type="text" class="inputText verCode">
-                <div class="regBtn ">
-                    <a href="#">获取短信验证码</a>
-                    <div class="overburden">
-                        <a href="#" class="overburden-btn overburden-btn-1 overburden-btn-1b" target="_blank">获取短信验证码</a>
+                <div class="form1">
+                    <input type="text" class="inputText verCode">
+                    <div class="regBtn">
+                        <div class="wrap">
+                            <a class="btn-0 btn-1" href="#" type="submit">获取短信验证码</a>
+                        </div>
                     </div>
                 </div>
             
@@ -158,13 +165,13 @@
                     <span>密码</span>
                     <span class="required">*</span>
                     <br>
-                    <input type="text" class="inputText">
+                    <input type="password" name="userpass" id="userpass" class="inputText">
             </div>
             <div class="formRow">
                     <span>确认密码</span>
                     <span class="required">*</span>
                     <br>
-                    <input type="text" class="inputText">                
+                    <input type="password" name="pwd_again" class="inputText">                
             </div>
         </div>
         <p>*最少8个字符，至少包含1个数字，1个英文字符</p>
@@ -173,57 +180,207 @@
         </label>
         <div class="centerer">
             <div class="wrap">
-                <a class="btn-0" href="#" type="submit">立即注册</a>
+                <!-- <a class="btn-0" href="#" type="submit" id="btn">立即注册</a> -->
+                <button class="btn-0" type="button" id="btn">立即注册</button>
             </div>
         </div>
+        <div id="messageBox"></div>
     </form>
 
 </div>
 
-
+<!-- 底部 -->  
+<div class="footer">
+        <div class="lay1">
+            <div class="row">
+    
+                <div class="col-md-4">
+                        <div class="title">
+                            <h3>联系我们</h3>
+                        </div>
+                    <div class="contains">
+                        <a href="#" class="chat">
+                            <i class="iconfont icon-chat"></i>
+                            <span>在线咨询</span>
+                        </a>
+                        <a href="#" class="tel">
+                            <i class="iconfont icon-phone"></i>
+                            <span>400-821-6076</span>
+                        </a>
+                    </div>
+                    
+                </div>
+    
+                <div class="col-md-4">
+                        <div class="title">
+                            <h3>关注我们</h3>
+                        </div>
+                    <div class="contains">
+                        <a href="#" class="wechat">
+                            <i class="iconfont icon-we-chat"></i>
+                        </a>
+                        <a href="#" class="weibo">
+                            <i class="iconfont icon-weibo"></i>
+                        </a>
+                        <a href="#" class="redbook">
+                            <i class="iconfont icon-xiaohongshu"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="title">
+                            <h3>寻找专柜</h3>
+                        </div>
+                    <div class="contains">
+                        <a href="#" class="home">
+                            <i class="iconfont icon-home"></i>
+                            <span>专柜查询</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="lay2">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contains">
+                        <h5>关于我们</h5>
+                        <ul>
+                            <li>
+                                <a href="#">品牌故事</a>
+                            </li>
+                            <li>
+                                <a href="#">官网购物理由</a>
+                            </li>
+                            <li>
+                                <a href="#">品牌资讯</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">                
+                    <div class="contains">
+                        <h5>明星产品</h5>
+                        <ul>
+                            <li>
+                                <a href="#">查看所有</a>
+                            </li>
+                            <li>
+                                <a href="#">「傲娇精华」红妍肌活精华露</a>
+                            </li>
+                            <li>
+                                <a href="#">「蓝胖子」新艳阳夏臻效水动力防晒乳</a>
+                            </li>
+                            <li>
+                                <a href="#">「细管唇膏」沁色绚彩唇膏</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">                
+                        <div class="contains">
+                            <h5>帮助中心</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">常见问题</a>
+                                </li>
+                                <li>
+                                    <a href="#">退换货政策</a>
+                                </li>
+                                <li>
+                                    <a href="#">订单查询</a>
+                                </li>
+                                <li>
+                                    <a href="#">网站地图</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="lay3">
+            <a href="https://www.shiseido.com.cn/terms-of-use.html">使用条款</a>
+            <a href="https://www.shiseido.com.cn/privacy-policy.html">隐私政策</a>
+            <a href="https://www.shiseido.com.cn/license.html">上海工商</a>
+            <a href="http://www.beian.miit.gov.cn/state/outPortal/loginPortal.action;jsessionid=HYQG0rZBcOGhUvypcwqtPI3ahZUmkwGDDhKPyb2_P6hwwEn8UwU4!821559948">沪ICP备10203872号-1</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502007430">沪公网安备 31011502007430号</a>
+            <span>Copyright © 2019 资生堂(中国)投资有限公司</span>
+        </div>
+    </div>
 </body>
 </html>
-<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-<script src="js/nav.js"></script>
+<!-- <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script> -->
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- <script type="text/javascript" src="js/jquery-1.8.3.js"></script> -->
+<!-- <script src="js/nav.js"></script> -->
 <script src="js/clickCheck.js"></script>
-<script src='js/jquery.min.js'></script>
-<script type="text/javascript">   
-    var s = WIDGETS.imgSmoothCheck({
-        selector: "#select",
-        data: ["img/t1.jpg", "img/t2.jpg", "img/t3.jpg"],
-        imgHeight: 200,
-        imgWidth: 320,
-        allowableErrorValue: 3,
-        success: function () {
-            alert('验证成功');
-            $(".widgets__img_check_box").remove();
-            $(".regBtn").css({
-                'background':'white',
-                'color':'black'
-            });
-            $(".regBtn a").css({'cursor':'pointer'});
-            $(".regBtn").hover(
-                function () {
-                    $(".regBtn").css({
-                        'background':'white',
-                        'border':'1px solid black'});
-                    $(".regBtn a").css({'color':'black'});
-                },
-                function () {
-                    $(".regBtn").css({'background':'black'});
-                    $(".regBtn a").css({'color':'white'});
-                }                
-            );            
-        },
+<!-- <script src='js/jquery.min.js'></script> -->
+<!-- <script src="js/register.js"></script> -->
 
-        error: function (res) {
-            alert('请重试');
-        }
-    });
-    $(".refresh").on("click", function () {
-        s.refresh();
-    });
-    </script>
 <script>
 
-</script>
+        $("#btn").onclick = function(){
+            //1、
+            let xhr = new XMLHttpRequest();
+        
+            xhr.open("post","regSave.php",true);
+        
+            xhr.onreadystatechange = function(){
+                alert("0");
+                if(xhr.readyState==4 && xhr.status==200){
+                    if(xhr.responseText=="-1"){
+                        alert("1");
+                        $("#messageBox").style.color ="red";
+                        $("#messageBox").innerHTML ="该手机号已被注册";
+                    }else if(xhr.responseText=="0"){
+                        $("#messageBox").style.color ="red";
+                        $("#messageBox").innerHTML ="注册失败";
+                        alert("2");
+                    }else if(xhr.responseText=="1"){
+                        alert("3");
+                        $("#messageBox").style.color ="green";
+                        $("#messageBox").innerHTML ="注册成功，请<a href='login.html'>登录</a>";
+                    }
+                }
+            }
+            //post方式：设置请求头
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
+            let sendstr = `userTel=${$("#userTel").value}&userpass=${$("#userpass").value}`;
+            
+            xhr.send(sendstr);
+        
+        }
+        
+    
+        
+        
+        
+        function check(){
+            //非空判断：
+            if($("#userTel").value=="" || $("#userpass").value=="" || $("#userId").value==""){
+                alert("亲，请把带星号的都输入了");
+                return false;//阻止浏览器的默认行为
+            }
+            //判断用户名是否符合规则
+        
+            //判断密码和重复密码是否一致。
+        
+            
+        }
+        
+        function $(str){
+            if(str.charAt(0)=="#"){
+                return document.getElementById(str.substring(1));
+            }else if(str.charAt(0)=="."){
+                return document.getElementsByClassName(str.substring(1));
+            }else{
+                return document.getElementsByTagName(str);
+            }
+        }	
+        
+        </script>

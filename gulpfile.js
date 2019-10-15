@@ -25,6 +25,11 @@ gulp.task("watchall",async ()=>{
         gulp.src("css/**/*")
         .pipe(gulp.dest("D:\\phpStudy\\WWW\\Shiseido\\css"));
     })
+    //拷贝php
+    gulp.watch("*.php", async ()=>{
+        gulp.src("*.php")
+        .pipe(gulp.dest("D:\\phpStudy\\WWW\\Shiseido"));
+    })
     //拷贝文件夹
     gulp.watch("font/**/*", async ()=>{
         gulp.src("font/**/*")

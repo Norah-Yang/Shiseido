@@ -146,7 +146,7 @@ nav .box ul li a{
 */
 .contain{
     width: 100%;
-    height: 600px;
+    height: 1670px;
     background: url(https://www.shiseido.com.cn/on/demandware.static/-/Sites-shiseido_global_cn-Library/default/dw1243bdd5/background-images/account-banner-bg.png) top right no-repeat;
 }
 .contain .regBox{
@@ -194,16 +194,17 @@ nav .box ul li a{
         .inputText{
             padding: 14px 18px 15px;
             margin-top: 22.5px;
-            width: 280px;
+            width: 330px;
+            height: 48px;
             border: 1px solid #ccc;
         }
         .verCode{
-            width: 110px;
+            width: 155px;
             margin-right: 13px;
         }
     } 
     .form1{
-        // display: flex;
+        display: flex;
     }
     .formCheck{
        color: #888888;
@@ -221,20 +222,8 @@ nav .box ul li a{
     }
     
     .regBtn{
-        height: 48px;
-        width: 150px;
-        background: #999999;
-        border: 1px solid #999999;
-        font-size: 18px;
-        display: inline-block;
-        position: relative;
-        a{
-            font-weight: bolder;
-            color: black;
-            line-height: 48px;
-            cursor: default;
-            padding-left: 12px;
-        }
+        margin-top: 10px;
+        text-align: center;
     }
 }   
     p{
@@ -252,56 +241,110 @@ nav .box ul li a{
         display: none;
 
     }
-    // .overburden p {
-    //     position: relative;
-    //     margin: 0;
-    //     padding: 1em;
-    //     z-index: 1;
-    // }
-    // .overburden-btn {
-    //     border: 1px solid black;
-    //     font-family: inherit;
-    //     font-size: inherit;
-    //     color: inherit;
-    //     background:none;
-    //     cursor: pointer;
-    //     font-weight: bold;
-    //     height: 48px;
-    //     line-height: 48px;
-    //     width: 138px;
-    //     font-size: 18px;
-    //     display: inline-block;
-    //     font-weight: 700;
-    //     outline: none;
-    //     position: relative;
-    //     -webkit-transition: all 0.3s;
-    //     -moz-transition: all 0.3s;
-    //     transition: all 0.3s;
-    // }
-    // .overburden-btn-1 {
-    //     color: black;
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    // }
-    // .overburden-btn-1b:hover, .overburden-btn-1b:active {
-    //     color: white;
-    // }
-    // .overburden-btn-1b:hover:after, .overburden-btn-1b:active:after {
-    //     width: 100%;
-    // }
-    // .overburden-btn:after {
-    //     content: '';
-    //     position: absolute;
-    //     z-index: -1;
-    //     -webkit-transition: all 0.3s;
-    //     -moz-transition: all 0.3s;
-    //     transition: all 0.3s;
-    // }
-    // .overburden-btn-1b:after {
-    //     height: 100%;
-    //     width: 0;
-    //     top: 0;
-    //     left: 0;
-    //     background: black;
-    // }
+    .centerer{
+        .wrap{
+            margin-left: 50%;
+            margin-top: 90px;
+            padding: 0 10px;
+            .btn-0{
+                width: 330px;
+            }
+        }
+    }
+
+
+/*!
+* 底部
+*/
+
+.footer{
+    width: 100%;
+    height: 515px;
+    background: #000000;
+}
+.footer .lay1{
+    width: 1147px;
+    margin: 0 auto;
+    padding: 53px 0 50px;
+    border-bottom: 1px solid #666;
+}
+.footer .title{
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+.footer .title h3{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #ccc;
+}
+.footer .row{
+    display: flex;
+    justify-content: center;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.lay1 .contains{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.footer .lay1 a{
+    color: #ccc;
+    font-size: 16px;
+    display: inline-block;
+    
+}
+.footer  a:hover{
+    text-decoration: none;
+    opacity: .7;
+}
+.footer  i{
+    color: #ccc;
+    font-size: 28px;
+    vertical-align: middle;
+}
+.footer .lay1 span{
+    margin-left: 8px;
+    color: #ccc;
+}
+.tel{
+    margin-left: 20px;
+}
+.tel span{
+    letter-spacing: 3px;
+}
+.lay2{
+    width: 1147px;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 59px;
+}
+.lay2 h5{
+    font-size: 16px;
+    padding-bottom: 27px;
+    font-weight: bolder;
+    color: #666;
+}
+ .lay2 a{
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #666;
+}
+.lay2 .contains{
+    text-align: center;
+}
+.footer .lay3{
+    text-align: center;
+}
+.footer .lay3 a{
+    color: #666;
+    margin-left: 10px;
+}
+.footer .lay3 span{
+    color: #666;
+    margin-left: 10px;
+}
