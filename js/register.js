@@ -7,7 +7,9 @@ var s = WIDGETS.imgSmoothCheck({
     success: function () {
         alert('验证成功');
         $(".widgets__img_check_box").remove();
-        $(".contain").css({'height':'1315'})
+        $(".contain").css({'height':'1315'});
+        $("#btnLogin").css({'display':'block'});
+        $("#btn").css({'display':'block'})
     },
 
     error: function (res) {

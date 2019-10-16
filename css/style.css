@@ -145,3 +145,54 @@ html span {
     height: 375px;
   }
 }
+
+
+[type=button].primary.large, [type=reset].primary.large, [type=submit].primary.large, a.button.primary.large, button.primary.large {
+  height: 48px;
+  padding: 0;
+  line-height: 48px;
+  min-width: 200px;
+}
+[type=button].primary.active, [type=button].primary:active, [type=button].primary:hover, [type=reset].primary.active, [type=reset].primary:active, [type=reset].primary:hover, [type=submit].primary.active, [type=submit].primary:active, [type=submit].primary:hover, a.button.primary.active, a.button.primary:active, a.button.primary:hover, button.primary.active, button.primary:active, button.primary:hover {
+  color: #000;
+  background: white;
+}
+[type=button].primary, [type=reset].primary, [type=submit].primary, a.button.primary, button.primary {
+  color: #fff;
+  position: relative;
+  background: 0 0;
+  font-weight: 700;
+}
+[type=button], [type=reset], [type=submit], a.button, button {
+  cursor: pointer;
+  line-height: .86;
+  font-size: 20px;
+  background: #fff;
+  text-align: center;
+  letter-spacing: 1.4px;
+  border: 1px solid #000;
+  font-family: "Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+[type=button].primary:before, [type=reset].primary:before, [type=submit].primary:before, a.button.primary:before, button.primary:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+[type=button].primary::after, [type=reset].primary::after, [type=submit].primary::after, a.button.primary::after, button.primary::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width .3s ease;
+}

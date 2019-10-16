@@ -120,13 +120,15 @@
             <span>手机</span>
             <span class="required">*</span>
             <br>
-            <input type="text" id="userTel" name="userTel" class="inputText"  ><span style="font-size: 12px;"></span>
+            <input type="text" id="userTel" name="userTel" class="inputText"  onblur="checkuser(this)"><span style="font-size: 12px;"></span>
+            <span id="1"></span>
         </div>
         <div class="formRow">
                 <span>姓名</span>
                 <span class="required">*</span>
                 <br>
                 <input type="text" id="userId" name="userId" class="inputText">
+                <span id="2"></span>
         </div>
         <div class="widgets__img_check_box" id="select" style="width:400px;top:2px;">
             <p>拖动下方滑块完成拼图</p>                       
@@ -154,11 +156,11 @@
                     <input type="text" class="inputText verCode">
                     <div class="regBtn">
                         <div class="wrap">
-                            <a class="btn-0 btn-1" href="#" type="submit">获取短信验证码</a>
+                            <button type="button" id="btnLogin" class="primary large data-field" style="display: none;">获取短信验证码</button>
                         </div>
                     </div>
                 </div>
-            
+                <span id="3"></span>
         </div>
         <div class="form1">
             <div class="formRow">
@@ -166,25 +168,26 @@
                     <span class="required">*</span>
                     <br>
                     <input type="password" name="userpass" id="userpass" class="inputText">
+                    <span id="4"></span>
             </div>
             <div class="formRow">
                     <span>确认密码</span>
                     <span class="required">*</span>
                     <br>
-                    <input type="password" name="pwd_again" class="inputText">                
+                    <input type="password" name="pwd_again" id="pwd_again" class="inputText"> 
+                    <span id="5"></span>               
             </div>
         </div>
         <p>*最少8个字符，至少包含1个数字，1个英文字符</p>
-        <label for="" class="formCheck"><input type="checkbox">我同意收集和处理我的个人数据将符合资生堂
+        <label for="" class="formCheck"><input type="checkbox" id="agree">我同意收集和处理我的个人数据将符合资生堂
             <a href="#">隐私政策</a>，并且我同意我对本网站的使用将遵守这些<br> <a href="#">条款和条件</a>.
         </label>
+        <div id="messageBox" style="width: 500px;color: #c8102e;text-align: center;"></div>
         <div class="centerer">
             <div class="wrap">
-                <!-- <a class="btn-0" type="submit" id="btn">立即注册</a> -->
-                <button class="btn-0" type="submit" id="btn">立即注册</button>
+                <button type="button" id="btn" class="primary large data-field" style="width: 330px;display: none;">立即注册</button>
             </div>
         </div>
-        <div id="messageBox"></div>
     </form>
 
 </div>
@@ -322,32 +325,65 @@
 <script src="js/register.js"></script>
 
 <script>
-//     $("#btn").click(function(){
 
-//     var sendData = {"userTel":$("#userTel").val(),
-//                     "userId":$("#userId").val(),
-//                     "userpass":$("#userpass").val()}
-//     $.ajax({
-//         url:"regSave.php",
-//         type:"POST",
-//         data:sendData,
-//         success:function(data){
-//             if(xhr.responseText=="-1"){
-//                 $("#messageBox").html("用户存在不能注册")
-//             }else if(xhr.responseText=="1"){
-//                 $("#messageBox").html("注册成功，点击跳转")
-//             }else if(xhr.responseText=="0"){
-//                 $("#messageBox").html("注册失败")
-//             }
-//         }
-//     })
-// })
-
+ $('#userTel').blur(function() {
+    var r=/^1[3,5,7,8,9]\d{9}$/;
+    if($(this).val()==""){
+        $("#1").css({'color':'#c8102e','font-size':'12px'});
+        $("#1").text("请填写您的手机号");
+        }else{
+            $("#1").text("")
+        }
+    if (r.test($(this).val())){
+        $("#1").css({'color':'green','font-size':'12px'});
+        $("#1").text("手机号可以使用");
+    }else{
+        $("#1").css({'color':'#c8102e','font-size':'12px'});
+        $("#1").text("请输入正确的手机号");
+    }
+   })
+   $('#userId').blur(function() {
+    if($(this).val()==""){
+        $("#2").css({'color':'#c8102e','font-size':'12px'});
+        $("#2").text("请填写您的姓名");
+        }else{
+            $("#2").remove()
+        }     
+   })
+   $('.verCode').blur(function() {
+    if($(this).val()==""){
+        $("#3").css({'color':'#c8102e','font-size':'12px'});
+        $("#3").text("请填写验证码");
+        }else{
+            $("#3").remove()
+        }
+   })
+   $('#userpass').blur(function() {
+    if($(this).val()==""){
+        $("#4").css({'color':'#c8102e','font-size':'12px'});
+        $("#4").text("请填写您的密码");
+        }else{
+            $("#4").remove()
+        }
+   })
+   $('#pwd_again').blur(function() {
+        if($(this).val()==""){
+            $("#5").css({'color':'#c8102e','font-size':'12px'});
+            $("#5").text("请确认您的密码");
+            }  
+    if($(this).val()!== $('#userpass').val()){
+            $("#5").css({'color':'#c8102e','font-size':'12px'});
+            $("#5").text("两次密码不同，请确认");
+        }else{
+            $("#5").remove()
+        }
+    })
+        
 
 $("#btn").click(function(){ 
-    //非空判断
-
-    //1、
+   
+    if($("#agree").is(":checked") && ($("#userTel").val()!=="") && ($("#userId").val()!=="") && ($("#userpass").val()!=="")){
+        //1、
     let xhr = new XMLHttpRequest();
 
     xhr.open("post","regSave.php",true);
@@ -355,14 +391,15 @@ $("#btn").click(function(){
     xhr.onreadystatechange = function(){
         if(xhr.readyState==4 && xhr.status==200){
             if(xhr.responseText=="-1"){
-                $("#messageBox").css({'color':'red'});
-                $("#messageBox").text("用户名被人使用");
+                $("#messageBox").css({'color':'#c8102e'});
+                $("#messageBox").text("请重新填写手机号");
             }else if(xhr.responseText=="0"){
-                $("#messageBox").css({'color':'red'});
+                $("#messageBox").css({'color':'#c8102e'});
                 $("#messageBox").text("注册失败");
             }else if(xhr.responseText=="1"){
                 $("#messageBox").css({'color':'green'});
-                $("#messageBox").text("注册成功，点击登录");
+                $("#messageBox").text("注册成功，正在跳转登录页面");
+                $(window).attr('location','checkout.html');
             }
         }
     }
@@ -371,7 +408,37 @@ $("#btn").click(function(){
     //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
     let sendstr = `userTel=${$("#userTel").val()}&userId=${$("#userId").val()}&userpass=${$("#userpass").val()}`;
     xhr.send(sendstr);
+    }else{
+        $("#messageBox").css({'color':'#c8102e'});
+        $("#input").css({'border-color':'#c8102e'});
+        $("#messageBox").text("在递交此表格前，请先核对这部分内容");
+    }
+    
 
 })
+
+ 
+    function checkuser(obj){
+        
+if($('#userTel').val()!==""){
+        let xhr =new XMLHttpRequest();
+
+        //2 设置请求参数
+        xhr.open("get","checkuser.php?userTel="+$("#userTel").val(),true);
+
+        //3 设置回调函数
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4 && xhr.status==200){
+                //5 接收请求
+                obj.nextElementSibling.innerHTML =  xhr.responseText;
+            }
+        }
+        //4 发送请求
+        xhr.send();
+
+    }   
+}
+
+
 
 </script>

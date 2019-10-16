@@ -222,8 +222,10 @@ nav .box ul li a{
     }
     
     .regBtn{
-        margin-top: 10px;
-        text-align: center;
+        padding-top: 22px;
+        button.primary.large{
+            min-width: 160px;
+        }
     }
 }   
     p{

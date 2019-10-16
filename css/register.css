@@ -204,8 +204,9 @@ nav .box ul li a {
     .regForm .formCheck a:hover {
       opacity: .7; }
   .regForm .regBtn {
-    margin-top: 10px;
-    text-align: center; }
+    padding-top: 22px; }
+    .regForm .regBtn button.primary.large {
+      min-width: 160px; }
 
 p {
   color: #888888;
