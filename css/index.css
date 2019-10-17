@@ -301,7 +301,8 @@ ol.carousel-indicators li.active {
     text-align: center;
     line-height: 34px;
     margin-bottom: 72px;
-}.slick_list{
+}
+.slick_list{
     width: 1030px;
     height: 560px;
     /* background-color: bisque; */

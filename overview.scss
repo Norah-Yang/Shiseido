@@ -1,7 +1,8 @@
 @charset "utf-8";
 body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
 	margin:0;
-	padding:0;
+    padding:0;
+    letter-spacing: -.1px;
 }
 li{    
     list-style: none; 
@@ -173,16 +174,471 @@ nav .box ul li a{
             }
         }
     }
+    .likeIcon{
+        width: 60%;
+        a:hover{
+            color: #c8102e;
+        }
+        a{
+            display: inline-block;
+            margin-left: 90%;
+            color: rgb(204,204,204);
+            span{
+                font-size: 32px;
+            }
+        }
+        
+    }
+    .and{
+        display: flex;
+        justify-content: space-between;
+    }
     .primaryContent{
         margin-top: 66px;
         width: 100%;
         .productImg{
             width: 56.25%;
-            margin-left: 3.375%;
             height: 650px;
-            img{
-                width: 567px;
-                margin: 0 1px;
+            .imgBox{
+                width: 100%;
+                height: 600px;
+                position: relative;
+                img{
+                    width: 567px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }/* 去掉轮播图箭头的阴影 */
+            .carousel-control.left {  
+                background-image:none;
+                background-repeat: repeat-x;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+            }
+            .carousel-control.right {
+                left: auto;
+                right: 0;
+                background-image:none;
+                background-repeat: repeat-x;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+            }  
+            /* 改变豆豆的颜色 */
+            ol.carousel-indicators li {
+                width: 31px;
+                height: 10px;
+                background: rgb(204,204,204);
+                border-radius: 0;
+            }
+            ol.carousel-indicators li.active {
+                width: 89px;
+                height: 10px;
+                background-color: #c8102e;
+                border-radius: 0;
+            }
+            /* 改变豆豆到左边的距离 */
+            .carousel-indicators {
+                margin-left: -65%;
+            }
+            .carousel-control{
+                color: #666;
+            }
+        }
+        .productDetails{
+            width: 37%;
+            height: 300px;
+            float: right;
+            h2{
+                font-size: 24px;
+                color: black;
+                margin-bottom: 11px;
+            }
+            p{
+                font-size: 18px;
+                color: black;
+            }
+            h4{
+                margin-top: 36px;
+                margin-bottom: 14px;
+                font-size: 16px;
+                color: #666;
+            }
+            label{
+                width: 100%;
+                .check{
+                    zoom: 175%;
+                    margin-bottom: 25px;
+                }
+            }
+            select{
+                padding: 20px 20px 20px 20px;
+                font-size: 20px;
+                font-weight: bolder;
+            }
+            .addToCar{
+                padding: 0 30px;
+                margin: 0 10px 10px;
+                height: 70px;
+                line-height: 70px;
+                vertical-align: top;
+                background: white;
+                border: 1px solid #ccc;
+                font-size: 18px;
+            }
+            .addToCar:hover{
+                border-color:#c8102e;
+                color: #c8102e;
+            }
+            .buyNow{
+                padding: 0 45px;
+                margin: 0 0 10px;
+                height: 70px;
+                line-height: 70px;
+                vertical-align: top;
+                background: black;
+                border: 1px solid black;
+                font-size: 18px;
+                color: white;
+            }
+            .buyNow:hover{
+                background: white;
+                color: black;
+            }
+            ul{
+                padding: 0 5px;
+                margin-top: 40px;
+                display: flex;
+                li{
+                    width:120px;
+                    height: 74px;
+                    padding: 0 8px;
+                    margin-bottom: 20px;
+                    text-align: center;     
+                    border-right: 1px solid #ccc;  
+                    img{
+                        margin-bottom: 4px; 
+                    }
+                }
+                li:last-child{
+                    border: none;
+                }
+            }
+        }
+        
+    }
+    .jumpLink{
+        width: 100%;
+        height: 21px;
+        ul{
+            width: 75%;
+            display: flex;
+            margin-left: 64.5%;
+            li{
+                margin-right: 72px;
+                float: right;
+                a{
+                    color: #666;
+                }
+                a:hover{
+                    opacity: .7;
+                }
+            }
+        }
+    }
+    .open{
+        padding-top: 115px;
+        width: 100%;
+        .inner{
+            padding: 20px;
+            .tabWrap{
+                padding: 0 20px;
+                width: 962px;
+                margin-right: auto;
+                margin-left: auto;
+                h4{
+                    margin-bottom: 34px;
+                    font-size: 24px;
+                }
+                p{
+                    color: #666;
+                    font-size: 18px;
+                    padding: 30px 65px;
+                    background: #F8F8F8;
+                    border-top: 2px solid #000;
+                    border-bottom: 8px solid #000;
+                }
+            }
+        }
+    }
+    #contentZone{
+        width: 100%;
+        .contentInner{
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            .por{
+                position: relative;
+                .swiper-wrapper{
+                    width: 922px;
+                    display: flex;
+                    // overflow: hidden;
+                    margin: auto;
+                    .swiper-slide{
+                        width: 308px !important;
+                        margin-right:0 !important;
+                        img{
+                            width:100%;
+                        }
+                    }
+                }
+                img{
+                    width: 922px;
+                }
+            }
+            .poa{
+                position: absolute;
+                width: 421.00px;
+                height: 434.00px;
+                // z-index: 2;
+                .flipBox{
+                    position: relative;
+                    transform-style: preserve-3d;
+                    transition: transform 1s;
+                    width: 100%;
+                    height: 100%;
+                    .pic{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        backface-visibility: hidden;
+                        width: 100%;
+                        height: 100%;
+                        img{
+                            width:100%;
+                        }
+                    }
+                    .back{
+                        transform: rotateY(180deg);
+                        }
+                    }
+                }
+            .poa:hover .flipBox{
+                transform: rotateY(-180deg);
+                }
+            .stage1{
+                top: 0px;
+                left: 205px;
+            }
+            .stage2{
+                top: 0px;
+                left: 653px;
+            }
+            .stage3{
+                top: 493px;
+                left: 205px;
+            }
+            .stage4{
+                top: 493px;
+                left: 653px;
+            }
+            .stage5{
+                top: 983px;
+                left: 205px;
+            }
+            .stage6{
+                top: 983px;
+                left: 653px;
+            }
+            .stage7{
+                top: 1476px;
+                left: 205px;
+            }
+            .stage8{
+                top: 1476px;
+                left: 653px;
+            }
+
+            }
+            .mobi{
+                width: 922px;
+            }
+        }
+    .recom{
+        width: 100%;
+        .recomCotain{
+            width: 75%;
+            margin-left: 12.5%;
+            margin-top: 107px;
+            margin-bottom: 105px;
+            .title{
+                margin-bottom: 72px;
+                font-size: 28px;
+                text-align:center;
+                font-weight: bolder;
+            }
+            .slick_list{
+                width: 1030px;
+                height: 560px;
+                margin: 47px auto 0;
+                display: flex;
+                margin-bottom: 20px;
+                .img{
+                    width: 343px;
+                    height: 100%;
+                    position: relative;
+                    p{
+                        width: 343px;
+                        height: 42px;
+                    }
+                    span{
+                        float: right;
+                        font-size: 29px;
+                        margin-right: 10px;
+                        color: #ccc;
+                        line-height: 42px;
+                    }
+                    span:hover{
+                        color: #c8102e;
+                    }
+                    .contain{
+                        width: 343px;
+                        height: 331px;
+                        img{
+                            padding: 0 20px 28px;
+                        }
+                    }
+                    .productName{
+                        width: 343px;
+                        height: 65px;
+                        margin-bottom: 40px;
+                        padding: 0px 12.7% 0px 13.6%;
+                        a{
+                            text-align: left;
+                            color: black;
+                            p{
+                                height: 20px;
+                                line-height: 22px;
+                                font-weight: 400;
+                            }
+                        }
+                        a:hover{
+                            text-decoration: none;
+                            color: rgb(200, 16, 46);
+                        }
+                        h5{
+                            font-size: 16px;
+                        }
+                    }
+                    .productPrice{
+                        width: 343px;
+                        height: 19px;
+                        h2{
+                            font-size: 16px;
+                            text-align: left;
+                            padding: 0 12.7% 0 13.6%;
+                            color: black;
+                            margin-bottom: 28px;
+                        }
+                        h2:hover{
+                            color: #c8102e;
+                        }
+                        a{
+                            margin: 0 12.7% 24px 13.6%;
+                            font-size: 18px;
+                            color: #c8102e;
+                            text-decoration: none;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .cover{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    display: none;
+                    box-shadow:0px 0px 0px grey, 6px 0px 14px #ccc;
+                    
+                }
+                .selectDiv{
+                    height: 40px;
+                    width: 100%;
+                    background: black;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;   
+                }
+                form{
+                    margin-top: 6px;
+                    display: flex;
+                    align-items: bottom;
+                    justify-content: space-between;
+                }
+                #num{
+                    width: 58px;
+                    color: white;
+                    background: black;
+                    font-size: 14px;
+                    font-weight: bolder;
+                    border: none;
+                    border-right: 1px solid #cccccc;
+                }
+                #num option:hover{
+                    background: #ccc;
+                }
+                #num:active {
+                    border: none;
+                }
+                #pro{
+                    width: 80px;
+                    color: white;
+                    background:black;
+                    font-size: 14px;
+                    font-weight: bolder;
+                    border: none; 
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                form a{
+                    color: white;
+                    width: 87px;
+                    font-size: 18px;
+                    font-weight: bolder;
+                    line-height: 26px;
+                    border-left: 1px solid #cccccc;
+                    text-align: center;
+                }
+                form a:hover{
+                    text-decoration: none;
+                    color: white;
+                }
+                .img:hover .cover{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    #review{
+        width: 100%;
+        padding: 120px 0;
+        .proRev{
+            width: 100%;
+            margin: 0 auto;
+            h4{
+                font-size: 36px;
+                color: black;
+                margin-bottom: 85px;
+                text-align: center;
+            }
+            .proInner{
+                padding: 55px 100px;
             }
         }
     }
