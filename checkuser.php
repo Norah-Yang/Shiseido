@@ -24,7 +24,7 @@
         mysql_close($conn);
 
         if($rows>0){
-            echo "该手机号已被注册";
+            echo "您的手机号已经被注册";
         }else{
             echo "";
         }

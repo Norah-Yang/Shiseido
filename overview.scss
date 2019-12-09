@@ -17,129 +17,7 @@ body{
 /*!
 * nav
 */
-.navMain{
-    width: 100%;
-    background: #000000;
-}
-nav{
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    position: relative;
-}
-nav img{
-    margin-top: 27px;
-}
-.logo{
-    width: 386px;
-    height: 100px;
-}
 
-.navCon{
-    width: 1030px;
-    height: 100px;
-    display: flex;
-}
-.main{
-    background: black;
-    width: 628px;
-    color: white;
-    position: relative;
-}
-.main .ul1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.main .ul1 li{
-    list-style: none;
-    line-height: 50px;
-}
-.main .ul1 li a{
-    color: white;
-    font-size: 18px;
-    font-weight: bolder;
-    text-decoration: none;
-    line-height: 100px;
-}
-.main .ul1 li a:hover{
-    border-bottom: 4px solid #c8102e;
-}
-nav .box{
-    width: 100%;
-    height: 700px;
-    z-index: 20;
-    position: absolute;
-    top: 100px;
-    background: black;
-    display: none;
-    cursor: default;
-}
-nav .box ul li a{
-    color: white;
-    font-size: 30px;
-    font-weight: bolder;
-    text-decoration: none;
-    line-height: 100px;
-}
-.icon{
-    width: 345px;
-    height: 30px;
-}
-.icon ul{
-    float: right;
-    margin-right: 15px;
-}
-.icon li{
-    height: 20px;
-    width: 20px;
-    float: left;
-    padding: 0 1px 0;
-    margin: 0 10px;
-}
-.icon a span{
-    color: white;
-    font-size: 20px;
-    line-height: 100px;
-}
-.icon a:hover{
-    text-decoration: none;
-}
-.navMain .box ul {
-    margin-left: 380px;
-    margin-top: 80px;
-}
-.navMain .box ul li{
-    font-size: 30px;
-    color: white;
-    display: inline-block;
-    line-height: 50px;
-}
-.navMain .box ul li:hover{
-    border-bottom: 4px solid #c8102e;
-    font-weight: bold;
-}
-.navMain .box3 ul li:hover{
-    border-bottom: none;
-    font-weight: bold;
-}
-.navMain .box .ul2{
-    font-size: 18px;
-    color: white;
-    position: absolute;
-    top: 0;
-    margin-left: 50%;
-}
-.navMain .box .ul2 a:hover{
-    font-weight: 100;
-}
-.navMain .box .ul2 a{
-    color: white;
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 100;
-}
 
 /*!
 * container
@@ -189,62 +67,94 @@ nav .box ul li a{
         }
         
     }
-    .and{
-        display: flex;
-        justify-content: space-between;
-    }
     .primaryContent{
         margin-top: 66px;
         width: 100%;
+		.and{
+			display: flex;
+			justify-content: space-between;
+		}
         .productImg{
             width: 56.25%;
             height: 650px;
-            .imgBox{
-                width: 100%;
-                height: 600px;
-                position: relative;
-                img{
-                    width: 567px;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    margin: auto;
-                }
-            }/* 去掉轮播图箭头的阴影 */
-            .carousel-control.left {  
-                background-image:none;
-                background-repeat: repeat-x;
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-            }
-            .carousel-control.right {
-                left: auto;
-                right: 0;
-                background-image:none;
-                background-repeat: repeat-x;
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-            }  
-            /* 改变豆豆的颜色 */
-            ol.carousel-indicators li {
-                width: 31px;
-                height: 10px;
-                background: rgb(204,204,204);
-                border-radius: 0;
-            }
-            ol.carousel-indicators li.active {
-                width: 89px;
-                height: 10px;
-                background-color: #c8102e;
-                border-radius: 0;
-            }
-            /* 改变豆豆到左边的距离 */
-            .carousel-indicators {
-                margin-left: -65%;
-            }
-            .carousel-control{
-                color: #666;
-            }
+			position: relative;
+			.douBox{
+				position:absolute;
+				left:38px;
+				width:45px;
+				li{
+					width: 44px;
+					margin:0 1px 10px;
+					img{
+						width: 100%;
+					}
+				}
+				.active{
+					border: 2px solid #c8102e;
+				}
+			}
+			.doudou{
+				position: absolute;
+				bottom: 40px;
+				left: 40px;
+				li{
+					width: 31px;
+					height: 10px;
+					background: rgb(204,204,204);
+					border-radius: 0;
+					float: left;
+					margin-right: 5px;
+				}
+				.active{
+					width: 89px;
+					height: 10px;
+					background-color: #c8102e;
+				}
+			}
+			.boxImg{
+				width:567px;
+				img{
+					width: 567px;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					display: none;
+				}
+			}
+			.bg{
+				img{
+					width: 750px;
+					position: fixed;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					z-index: 3;
+					display: none;
+				}
+			}
+			.arrow{
+				position: absolute;
+				top: 43%;
+				width: 40px;
+				height: 40px;
+				display: inline-block;
+				text-align: center;
+				cursor: pointer;
+				z-index: 1;
+				span{
+					font-size: 41px;
+					color: #ccc;
+				}
+			}
+				#left{
+					left: 1px;
+				}
+				#right{
+					right: 20px;
+				}
         }
         .productDetails{
             width: 37%;
@@ -639,7 +549,58 @@ nav .box ul li a{
             }
             .proInner{
                 padding: 55px 100px;
+                display: flex;
+                justify-content: space-between;
+                p{
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+                span{
+                    font-size: 18px;
+                }
+                .proAvg{
+                    p{
+                        padding-left: 140px;
+                        padding-top: 10px;
+                        font-weight: normal;
+                        font-size: 18px;
+                    }
+                }
+                .iconfont{
+                    font-size: 24px;
+                    color: #ccc;
+                }
             }
+            .write{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 75px;
+                a{
+                    width: 200px;
+                    height: 48px;
+                    color: white;
+                    background: black;
+                    font-size: 18px;
+                    line-height: 48px;
+                    display: inline-block;
+                    text-align: center;
+                    border: 1px solid black;
+                    margin-top: 20px;
+                }
+                a:hover{
+                    background: white;
+                    color: black;
+
+                }   
+            }
+            .noreview{
+                padding-top: 30px;
+                color: #bf2136;
+                font-weight: 700;
+                font-size: 18px;
+                padding-left: 100px;
+            }
+           
         }
     }
 }

@@ -18,182 +18,81 @@ body{
     bottom: 20px;
     right: 20px;
     z-index: 50;
-    transform: rotateZ(180deg); 
-    text-decoration: underline;
-}
-.top:visited{
-    color: #000000;
 }
 .top:hover{
-    color: #000000;
+	text-decoration: none;
+	color: #000000;
+}
+.top span{
+	background: white;
+	border-radius: 50%;
+	font-size: 26px;
 }
 
 
-/* nav */
-.navMain{
-    width: 100%;
-    background: #000000;
-}
-nav{
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    position: relative;
-}
-nav img{
-    margin-top: 27px;
-}
-.logo{
-    width: 386px;
-    height: 100px;
-}
-
-.navCon{
-    width: 1030px;
-    height: 100px;
-    display: flex;
-}
-.main{
-    background: black;
-    width: 628px;
-    color: white;
-    position: relative;
-}
-.main .ul1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.main .ul1 li{
-    list-style: none;
-    line-height: 50px;
-}
-.main .ul1 li a{
-    color: white;
-    font-size: 18px;
-    font-weight: bolder;
-    text-decoration: none;
-    line-height: 100px;
-}
-.main .ul1 li a:hover{
-    border-bottom: 4px solid #c8102e;
-}
-nav .box{
-    width: 100%;
-    height: 700px;
-    z-index: 20;
-    position: absolute;
-    top: 100px;
-    background: black;
-    display: none;
-    cursor: default;
-}
-nav .box ul li a{
-    color: white;
-    font-size: 30px;
-    font-weight: bolder;
-    text-decoration: none;
-    line-height: 100px;
-}
-.icon{
-    width: 345px;
-    height: 30px;
-}
-.icon ul{
-    float: right;
-    margin-right: 15px;
-}
-.icon li{
-    height: 20px;
-    width: 20px;
-    float: left;
-    padding: 0 1px 0;
-    margin: 0 10px;
-}
-.icon a span{
-    color: white;
-    font-size: 20px;
-    line-height: 100px;
-}
-.icon a:hover{
-    text-decoration: none;
-}
-.navMain .box ul {
-    margin-left: 380px;
-    margin-top: 80px;
-}
-.navMain .box ul li{
-    font-size: 30px;
-    color: white;
-    display: inline-block;
-    line-height: 50px;
-}
-.navMain .box ul li:hover{
-    border-bottom: 4px solid #c8102e;
-    font-weight: bold;
-}
-.navMain .box3 ul li:hover{
-    border-bottom: none;
-    font-weight: bold;
-}
-.navMain .box .ul2{
-    font-size: 18px;
-    color: white;
-    position: absolute;
-    top: 0;
-    margin-left: 50%;
-}
-.navMain .box .ul2 a:hover{
-    font-weight: 100;
-}
-.navMain .box .ul2 a{
-    color: white;
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 100;
-}
-/* .box1 ul .li4{
-    font-weight: bold;
-    border-bottom: 4px solid #c8102e;
-} */
 
 /* banner */
 .banner{
     width: 100%;
     height:524px;
+	position: relative;
+	/* margin-top: 100px; */
 }
-.banner .item a img{
-    height: 524px;
-    margin: 0 auto;
+.banner .boxImg{
+	/* position: absolute; */
+	/* width: 100%; */
+	height: 100%;
 }
-/* 去掉轮播图箭头的阴影 */
-.carousel-control.left {  
-    background-image:none;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+.banner .boxImg a img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	height: 100%;
+	text-align: center;
+	display: none;
 }
-.carousel-control.right {
-    left: auto;
-    right: 0;
-    background-image:none;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-}  
-/* 改变豆豆的颜色 */
-ol.carousel-indicators li {
-    width: 15px;
-    height: 15px;
-    border:2px solid #cccccc;
+.banner .doudou{
+	display: flex;
+	position: absolute;
+	bottom: 15px;
+	left: 47%;
 }
-ol.carousel-indicators li.active {
-    width: 15px;
-    height: 15px;
-    background-color: #000000;
+.banner .doudou li{
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;	
+	margin-left: 10px;
+	border: 2px solid #ccc;	
 }
-/* 改变豆豆到底部的距离 */
-.carousel-indicators {
-    bottom: 10px;
+.banner .doudou li:nth-child(1){
+	background: black;
+	border: none;
+}
+.banner .arrow{
+	position: absolute;
+	top: 43%;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	z-index: 1;
+}
+.banner .arrow span{
+  font-size: 41px;
+  color: #ccc;
+}
+.banner .arrow span:hover{
+	color: #999999;
+}
+.banner .arrow.left{
+  left: 1px;
+}
+.banner .arrow.right{
+  right: 1px;
 }
 
 
@@ -289,7 +188,7 @@ ol.carousel-indicators li.active {
 
 
 
-/* 畅销护肤新品 */
+/* 人气护肤星品 */
 .skin_news{
     width: 100%;
     /* background-color: aquamarine; */
@@ -409,6 +308,7 @@ form{
     font-size: 14px;
     font-weight: bolder;
     border: none;
+	text-align-last: center;
     border-right: 1px solid #cccccc;
 }
 #num option:hover{
@@ -418,17 +318,21 @@ form{
     border: none;
 }
 #pro{
-    width: 80px;
+    width: 150px;
     color: white;
     background:black;
     font-size: 14px;
     font-weight: bolder;
-    border: none; 
     white-space: nowrap;
     overflow: hidden;
+	border:none;
     text-overflow: ellipsis;
+	outline: none;
+	text-align-last: center;
 }
-form a{
+
+
+.cover form a{
     color: white;
     width: 87px;
     font-size: 18px;
@@ -735,6 +639,7 @@ form a:hover{
 .tags .tagsBox{
     margin-left: 12.5%;
     width: 75%;
+	overflow: hidden;
 }
 .tags .tagsBox h3{
     font-size:30px;
@@ -752,12 +657,16 @@ form a:hover{
 .tags .tagsBox ul{
     width:1000px;
     height: 240px;
-    display: flex;
+	display: flex;
+}
+.tags .tagsBox ul .tag1{
+	display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .tags .tagsBox ul img{
     width: 237px;
+	margin-right: 20px;
 }
 .tags .tagsBox ul img:hover{
     opacity: .7;
@@ -767,10 +676,14 @@ form a:hover{
     width: 1000px;
     height: 8px;
     background: #cccccc;
+	position: relative;
+	display: flex;
 }
-.a1{
+._a{
     width: 33.3%;
     height: 8px;
+}
+.a1{	
     background: #c8102e;
 }
 .counter{

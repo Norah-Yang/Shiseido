@@ -33,110 +33,6 @@ nav img {
   width: 386px;
   height: 100px; }
 
-.navCon {
-  width: 1030px;
-  height: 100px;
-  display: flex; }
-
-.main {
-  background: black;
-  width: 628px;
-  color: white;
-  position: relative; }
-
-.main .ul1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-
-.main .ul1 li {
-  list-style: none;
-  line-height: 50px; }
-
-.main .ul1 li a {
-  color: white;
-  font-size: 18px;
-  font-weight: bolder;
-  text-decoration: none;
-  line-height: 100px; }
-
-.main .ul1 li a:hover {
-  border-bottom: 4px solid #c8102e; }
-
-nav .box {
-  width: 100%;
-  height: 700px;
-  z-index: 20;
-  position: absolute;
-  top: 100px;
-  background: black;
-  display: none;
-  cursor: default; }
-
-nav .box ul li a {
-  color: white;
-  font-size: 30px;
-  font-weight: bolder;
-  text-decoration: none;
-  line-height: 100px; }
-
-.icon {
-  width: 345px;
-  height: 30px; }
-
-.icon ul {
-  float: right;
-  margin-right: 15px; }
-
-.icon li {
-  height: 20px;
-  width: 20px;
-  float: left;
-  padding: 0 1px 0;
-  margin: 0 10px; }
-
-.icon a span {
-  color: white;
-  font-size: 20px;
-  line-height: 100px; }
-
-.icon a:hover {
-  text-decoration: none; }
-
-.navMain .box ul {
-  margin-left: 380px;
-  margin-top: 80px; }
-
-.navMain .box ul li {
-  font-size: 30px;
-  color: white;
-  display: inline-block;
-  line-height: 50px; }
-
-.navMain .box ul li:hover {
-  border-bottom: 4px solid #c8102e;
-  font-weight: bold; }
-
-.navMain .box3 ul li:hover {
-  border-bottom: none;
-  font-weight: bold; }
-
-.navMain .box .ul2 {
-  font-size: 18px;
-  color: white;
-  position: absolute;
-  top: 0;
-  margin-left: 50%; }
-
-.navMain .box .ul2 a:hover {
-  font-weight: 100; }
-
-.navMain .box .ul2 a {
-  color: white;
-  font-size: 18px;
-  line-height: 32px;
-  font-weight: 100; }
-
 /*!
 * contain
 */
@@ -156,9 +52,14 @@ nav .box ul li a {
       color: black;
       font-size: 50px;
       margin-bottom: 50px;
-      line-height: 50px; }
+      line-height: 50px;
+      letter-spacing: 2px; }
+    .loginWrap .left form {
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: -.1px; }
     .loginWrap .left .loginForm {
-      width: 432px;
+      width: 100%;
       padding: 0 10px; }
       .loginWrap .left .loginForm .formRow {
         padding: 22.5px 10px; }
@@ -170,33 +71,56 @@ nav .box ul li a {
           color: #c8102e;
           letter-spacing: .4px; }
         .loginWrap .left .loginForm .formRow .inputText {
-          margin-top: 15px;
+          margin-top: 14px;
           width: 410px;
           height: 50px;
           border: 1px solid #ccc; }
         .loginWrap .left .loginForm .formRow .formCheck {
           color: #888888;
-          font-size: 14px; }
-          .loginWrap .left .loginForm .formRow .formCheck input {
-            zoom: 200%; }
+          font-size: 14px;
+          margin-right: 11px; }
+          .loginWrap .left .loginForm .formRow .formCheck input[type=checkbox] {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            box-shadow: none;
+            width: 30px;
+            height: 30px; }
         .loginWrap .left .loginForm .formRow button {
           border: 1px solid #000;
-          width: 100%; }
+          height: 48px;
+          width: 100%;
+          max-width: 413px;
+          background: #000000;
+          color: white;
+          font-weight: 800;
+          font-size: 18px; }
+        .loginWrap .left .loginForm .formRow button:hover {
+          background: white;
+          color: #000000;
+          cursor: pointer; }
       .loginWrap .left .loginForm .formRow1 {
         display: flex;
         align-items: center; }
+      .loginWrap .left .loginForm #messageBox {
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #c8102e; }
       .loginWrap .left .loginForm .rememberme {
         display: flex;
         justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        width: 413px; }
         .loginWrap .left .loginForm .rememberme .forget a {
           color: black;
           font-size: 18px;
           font-weight: normal;
-          text-decoration: underline;
-          border: none; }
+          text-decoration: underline; }
     .loginWrap .left .loginOauth {
-      width: 412px;
+      width: 100%;
+      max-width: 413px;
       height: 128px;
       margin: 7.5px 10px 0;
       border-top: 1px solid #ccc;
@@ -221,7 +145,8 @@ nav .box ul li a {
       color: black;
       font-size: 50px;
       margin-bottom: 72.5px;
-      line-height: 50px; }
+      line-height: 50px;
+      letter-spacing: .9px; }
     .loginWrap .right span {
       font-size: 18px; }
     .loginWrap .right .accountWrap {
@@ -232,9 +157,21 @@ nav .box ul li a {
         margin: 12px 0; }
     .loginWrap .right .button {
       display: inline-block;
-      width: 412px;
+      margin-top: 10px;
+      width: 100%;
       height: 48px;
-      z-index: 2; }
+      background: #000000;
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 48px;
+      max-width: 412px;
+      box-sizing: border-box;
+      border: 1px solid black;
+      text-align: center; }
+      .loginWrap .right .button:hover {
+        background: white;
+        color: black; }
 
 .footer {
   width: 100%;
@@ -245,52 +182,3 @@ nav .box ul li a {
     color: white;
     line-height: 85px;
     text-align: center; }
-
-[type=button].primary.large, [type=reset].primary.large, [type=submit].primary.large, a.button.primary.large, button.primary.large {
-  height: 48px;
-  padding: 0;
-  line-height: 48px;
-  min-width: 200px; }
-
-[type=button].primary.active, [type=button].primary:active, [type=button].primary:hover, [type=reset].primary.active, [type=reset].primary:active, [type=reset].primary:hover, [type=submit].primary.active, [type=submit].primary:active, [type=submit].primary:hover, a.button.primary.active, a.button.primary:active, a.button.primary:hover, button.primary.active, button.primary:active, button.primary:hover {
-  color: #000;
-  background: white; }
-
-[type=button].primary, [type=reset].primary, [type=submit].primary, a.button.primary, button.primary {
-  color: #fff;
-  position: relative;
-  background: 0 0;
-  font-weight: 700; }
-
-[type=button], [type=reset], [type=submit], a.button, button {
-  cursor: pointer;
-  line-height: .86;
-  font-size: 20px;
-  background: #fff;
-  text-align: center;
-  letter-spacing: 1.4px;
-  border: 1px solid #000;
-  font-family: "Microsoft YaHei",sans-serif;
-  font-weight: 400;
-  text-transform: uppercase; }
-
-[type=button].primary:before, [type=reset].primary:before, [type=submit].primary:before, a.button.primary:before, button.primary:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1; }
-
-[type=button].primary::after, [type=reset].primary::after, [type=submit].primary::after, a.button.primary::after, button.primary::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: width .3s ease; }

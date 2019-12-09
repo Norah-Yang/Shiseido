@@ -1,0 +1,365 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+	margin:0;
+	padding:0;
+}
+li{    
+    list-style: none; 
+}
+a{
+    text-decoration: none;
+}
+body{
+	font-family: "微软雅黑";
+}
+
+/* nav */
+.navMain{
+    width: 100%;
+    background: #000000;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+nav img{
+    margin-top: 27px;
+}
+.logo{
+    width: 386px;
+    height: 100px;
+}
+
+.navCon{
+    width: 1030px;
+    height: 100px;
+    display: flex;
+}
+.main{
+    background: black;
+    width: 628px;
+    color: white;
+    position: relative;
+}
+.main .ul1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main .ul1 li{
+    list-style: none;
+    line-height: 50px;
+}
+.main .ul1 li a{
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+    line-height: 100px;
+}
+.main .ul1 li a:hover{
+    border-bottom: 4px solid #c8102e;
+}
+nav .box{
+    width: 100%;
+    height: 700px;
+    z-index: 20;
+    position: absolute;
+    top: 100px;
+    background: black;
+    display: none;
+    cursor: default;
+}
+nav .box ul li a{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: none;
+    line-height: 100px;
+}
+.icon{
+    width: 345px;
+    height: 30px;
+}
+.icon ul{
+    float: right;
+    margin-right: 15px;
+}
+.icon li{
+    height: 20px;
+    width: 20px;
+    float: left;
+    padding: 0 1px 0;
+    margin: 0 10px;
+}
+.icon a span{
+    color: white;
+    font-size: 20px;
+    line-height: 100px;
+}
+.icon a:hover{
+    text-decoration: none;
+}
+.navMain .box ul {
+    margin-left: 380px;
+    margin-top: 80px;
+	width: 150px;
+}
+.navMain .box ul li{
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    line-height: 50px;
+	width: 100%;
+}
+.navMain .box ul span:hover{
+    border-bottom: 4px solid #c8102e;
+    font-weight: bold;
+}
+.navMain .box3 ul span:hover{
+    border-bottom: none;
+    font-weight: bold;
+}
+.navMain .box .ul2{
+	width: 150px;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 70px;
+    margin-left: 20%;
+	line-height: 30px;
+}
+.navMain .box .ul2 a:hover{
+    font-weight: 100;
+	text-decoration: underline;
+}
+.navMain .box .ul2 a{
+    color: white;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 100;
+}
+.navMain .box .iconfont{
+	position: absolute;
+	top: 10px;
+	right: 40px;
+	font-size: 24px;
+	color: white;
+	cursor:pointer;
+}
+
+/* login */
+
+
+.login{
+	width: 918px;
+	height: 460px;
+	background: white;	
+	position: absolute;
+	right: 16px;
+	display: none;
+	z-index: 99;
+	box-shadow: 0 5px 16px 4px rgba(0,0,0,.12);
+}
+.login .logAll{
+	width: 100%;
+}
+.trigle{
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom-color: white;
+	position: absolute;
+	top: -29px;
+	right: 110px;
+}
+
+.login .icon-close{
+	float: right;
+	margin-right: 12px;
+	margin-top: 12px;
+	font-size: 24px;
+	font-weight: 800;
+}
+
+.loginWrap {
+  margin-left: 2.25%;
+  width: 93.75%;
+  display: flex;
+  padding-top: 15px; }
+  .loginWrap .left {
+    width: 48%;
+    padding-right: 71px;
+    border-right: 1px solid #ccc; }
+    .loginWrap .left h1 {
+      color: black;
+      font-size: 30px;
+      margin-bottom: 10px;
+      line-height: 50px;
+      letter-spacing: 2px; }
+    .loginWrap .left form {
+      font-size: 16px;
+      line-height: 1.22;
+      letter-spacing: -.1px; }
+    .loginWrap .left .loginForm {
+      width: 100%;
+      padding: 0 7px; }
+      .loginWrap .left .loginForm .formRow {
+        padding: 5px 0 0; }
+        .loginWrap .left .loginForm .formRow span {
+          color: black;
+          line-height: 1;
+          font-size: 16px; }
+        .loginWrap .left .loginForm .formRow .required {
+          color: #c8102e;
+          letter-spacing: .4px; }
+        .loginWrap .left .loginForm .formRow .inputText {
+          margin-top: 8px;
+          width: 100%;
+          height: 40px;
+          border: 1px solid #ccc; }
+        .loginWrap .left .loginForm .formRow .formCheck {
+          color: #888888;
+          font-size: 14px;
+          margin-right: 11px; }
+          .loginWrap .left .loginForm .formRow .formCheck input[type=checkbox] {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            box-shadow: none;
+            width: 30px;
+            height: 30px; }
+        .loginWrap .left .loginForm .formRow button {
+          border: 1px solid #000;
+          height: 48px;
+          width: 100%;
+          max-width: 413px;
+          background: #000000;
+          color: white;
+          font-weight: 800;
+          font-size: 18px; }
+        .loginWrap .left .loginForm .formRow button:hover {
+          background: white;
+          color: #000000;
+          cursor: pointer; }
+      .loginWrap .left .loginForm .formRow1 {
+        display: flex;
+        align-items: center; }
+      .loginWrap .left .loginForm #messageBox {
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #c8102e; }
+      .loginWrap .left .loginForm .rememberme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; }
+        .loginWrap .left .loginForm .rememberme .forget a {
+          color: black;
+          font-size: 18px;
+          font-weight: normal;
+          text-decoration: underline; }
+    .loginWrap .left .loginOauth {
+      width: 100%;
+      max-width: 354px;
+      height: 99px;
+      margin: 7.5px 0 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc; }
+      .loginWrap .left .loginOauth p {
+        margin-top: 8px;
+        font-size: 16px; }
+      .loginWrap .left .loginOauth ul {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-around; }
+      .loginWrap .left .loginOauth a {
+        width: 36px;
+        height: 36px;
+        background: pink; }
+      .loginWrap .left .loginOauth span {
+        font-size: 32px; }
+  .loginWrap .right {
+    width: 48%;
+    padding-left: 24px;
+    padding-right: 47px;
+    float: right; }
+    .loginWrap .right h1 {
+      color: black;
+      font-size: 30px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      letter-spacing: .9px; }
+    .loginWrap .right span {
+      font-size: 18px;
+      margin-top: 8px;
+      margin-left: 10px; }
+    .loginWrap .right .accountWrap {
+      margin-bottom: 51px; }
+      .loginWrap .right .accountWrap span {
+        display: inline-block;
+        text-indent: 15px;
+        font-size: 15px;
+        color: #666;
+        margin: 18px 0 0; }
+    .loginWrap .right .button {
+      display: inline-block;
+      margin-top: 10px;
+      width: 100%;
+      height: 48px;
+      background: #000000;
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 48px;
+      max-width: 412px;
+      box-sizing: border-box;
+      border: 1px solid black;
+      text-align: center; }
+      .loginWrap .right .button:hover {
+        background: white;
+        color: black; }
+		
+/* 登录成功 */
+.success{
+	width: 326px;
+	position: absolute;
+	z-index: 99;
+	background: white;
+	right: 10px;
+	padding: 16px 16px 27px 26px;
+	box-shadow: 0 5px 16px 4px rgba(0,0,0,.12);
+	display: none;
+}
+.success h3{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.success h3 span{
+	font-size: 28px;
+}
+.success .user_link{
+	margin-right: 15px;
+}
+.success .user_link li{
+	padding: 12px 1px 0;
+	margin: 12px 0 0;
+	padding-bottom: 8px;
+}
+.success .user_link a{
+	font-size: 16px;
+	color: black;
+	font-weight: 600;
+}
+.success .user_link a:hover{
+	text-decoration: none;
+}
+.success .user_link a span{
+	color: #C8102E;
+	font-size: 22px;
+}

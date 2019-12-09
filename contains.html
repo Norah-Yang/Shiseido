@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/contains.css">
+		<link rel="stylesheet" href="css/iconfont.css">
+		<link rel="stylesheet" media="screen and (max-width:940px)" href="css/max.css">
+		<title></title>
+	</head>
+	<body>
+		<div class="logMain">
+		    <div class="loginWrap">
+		        <div class="left">
+		            <h1>已注册用户登录</h1>
+		            <form action="" id="login_form">
+		                <div class="loginForm">
+		                    <div class="formRow">
+		                        <span>您的邮箱/手机</span>
+		                        <span class="required">*</span>
+								<span id="1" style="padding-left: 10px;"></span>
+		                        <br>
+		                        <input type="text" id="userTel" name="userTel" autocomplete="off" class="inputText">
+		                    </div>
+		                    <div class="formRow">
+		                        <span>密码</span>
+		                        <span class="required">*</span>
+								<span id="2" style="padding-left: 10px;"></span>
+		                        <br>
+		                        <input type="password" id="userpass" name="userpass" class="inputText">
+		                    </div>
+							<div id="messageBox"></div>
+		                    <div class="rememberme">
+		                        <div class="formRow formRow1">
+		                            <label for="" class="formCheck">
+		                                <input type="checkbox" id="remPass">
+		                            </label>
+		                            <span>记住我</span>
+		                        </div>
+		                        <div class="forget">
+		                            <a href="#">忘记密码？</a>
+		                        </div>
+		                    </div>
+		                    <div class="formRow">
+		                        <button type="button" id="btnLogin" onclick="remeber()" class="primary large data-field">登录</button>
+		                    </div>
+		                   
+		                    <div class="loginOauth">
+		                        <p>使用合作网站账号登录</p>
+		                        <ul>
+		                            <li>
+		                                <a href="#"></a>
+		                                <span class="iconfont icon-we-chat"></span>
+		                            </li>
+		                            <li>
+		                                <a href="#"></a>
+		                                <span class="iconfont icon-weibo"></span>
+		                            </li>
+		                            <li>
+		                                <a href="#"></a>
+		                                <span class="iconfont icon-xiaohongshu"></span>
+		                            </li>
+		                        </ul>
+		                    </div>
+		                </div>
+		            </form>
+		        </div>
+		        <div class="right">
+		            <h1>新用户注册</h1>
+		            <span>注册即可尊享：</span>
+		            <div class="accountWrap">
+		                <span>-&nbsp;&nbsp;官网专属礼遇</span><br>
+		                <span>-&nbsp;&nbsp;最新活动资讯</span><br>
+		                <span>-&nbsp;&nbsp;收藏您喜爱的产品、文章</span>
+		            </div>
+					<a href="register.html" class="button">注册</a>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.8.3.js"></script>
+<script>
+	//手机号判断 
+	$("#userTel").blur(function(){
+		let r=/^1[3,5,7,8,9]\d{9}$/;
+		if($(this).val()==""){
+		    $("#1").css({'color':'#c8102e','font-size':'12px',fontSize:'14px'});
+		    $("#1").text("请输入一个有效的电话号码");
+		    }else{
+		        $("#1").text("");
+			$(this).css({border:'1px solid #ccc'});
+		    }
+		if (r.test($(this).val())){
+		}else{
+			$("#userTel").css({border:"1px solid #c8102e"})
+		    $("#1").css({'color':'#c8102e','font-size':'14px'});
+		    $("#1").text("请输入一个有效的电话号码");
+		}
+	})
+	//密码判断
+	$("#userpass").blur(function(){
+		if($(this).val()==""){
+			$("#2").css({'color':'#c8102e','font-size':'12px',fontSize:'14px'});
+			$("#2").text("请输入一个有效的密码");
+			$(this).css({border:'1px solid #c8102e'});
+		}else{
+			$("#2").text("");
+			$(this).css({border:'1px solid #ccc'});
+			
+		}
+	})
+	
+	//登陆
+	$("#btnLogin").click(function(){
+		let xhr = new XMLHttpRequest();
+		        
+		xhr.open("post","checkout.php",true);
+		        
+		xhr.onreadystatechange = function(){
+		    if(xhr.readyState==4 && xhr.status==200){
+		        if(xhr.responseText=="1"){
+		            // addCookie("userTel",$("#userTel").value,7);
+					$(window).attr('location','index.html');
+		        }else{
+					$("input").css({border:'1px solid #c8102e'});
+		            $("#messageBox").html("用户名或者密码错误");
+		        }
+		    }
+		}
+		//post方式：设置请求头
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		//post方式：把传给服务器端数据（键值对）放在send函数的参数里。
+		let sendstr = `userTel=${$("#userTel").val()}&userpass=${$("#userpass").val()}`;
+		xhr.send(sendstr);
+	})
+	
+	
+	
+	//记住密码
+	// $(function () {  
+	// 	var userTel = document.cookie('userTel');
+	// 	var userpass = document.cookie('userpass');
+	// 	//页面加载的时候从cookie中取出用户名和密码填充对应的输入框
+	// 	$('#userTel').val(userTel);  　　　　 
+	// 	$("#userpass").val(userpass)
+	// 	//选中保存秘密的复选框　
+	// 	　　　　if(userTel != null && userTel != '' && userpass != null && userpass != ''){
+	// 	$("#remPass").attr('checked',true);
+	// }
+	//  });
+	//  function remeber(){
+	//   var userTel = $("#userTel").val();
+	//   var userpass = $("#userpass").val();
+	//   //判断复选框的选择状态添加cookie
+	//   if ($("#remPass").is(":checked")) { 
+	//   　　　　//存储一个带7天期限的cookie
+	//   　　　　$.cookie("userTel", userTel, { expires: 7 });
+	//   　　　　$.cookie("userpass", userpass, { expires: 7 });
+	//   　　}
+	//   　　else {  　　　　
+	//   　　　　$.cookie("userTel", "", { expires: -1 });
+	//   　　　　$.cookie("userpass", "", { expires: -1 });
+	//   　　}
+	//   //提交表单
+	//   $("#login_form").submit();
+	//  }
+	//  
+	 //没有写事件
+</script>

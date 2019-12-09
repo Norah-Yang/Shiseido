@@ -8,8 +8,12 @@ var s = WIDGETS.imgSmoothCheck({
         alert('验证成功');
         $(".widgets__img_check_box").remove();
         $(".contain").css({'height':'1315'});
-        $("#btnLogin").css({'display':'block'});
-        $("#btn").css({'display':'block'})
+		//恢复按钮
+        $("#btnLogin,#btn").removeAttr('disabled').css({background:'black',color:'white'}).hover(function(){
+			$(this).css({background:'white',color:'black'});
+		},function(){
+			$(this).css({background:'black',color:'white'});
+		})
     },
 
     error: function (res) {

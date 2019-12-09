@@ -17,89 +17,11 @@
     <title>会员注册</title>
 </head>
 <body>
-    <!-- nav -->
-<div class="navMain">
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.png" alt=""></a>
-        </div>
-        <div class="navCon">
-            <div class="main">
-                <ul class="ul1">
-                    <li class="li1"><a href="#" id="skin">护肤</a></li>
-                    <li class="li2"><a href="#" id="makeUp">彩妆</a></li>
-                    <li><a href="#" id="sunBlock">防晒</a></li>
-                    <li><a href="#" id="men">男士</a></li>
-                    <li class="li3"><a href="#" id="offcial">官网臻享</a></li>
-                    <li><a href="#" id="news">品牌资讯</a></li>
-                </ul>
-            </div>
-            <div class="icon">
-                <ul>
-                    <li>
-                        <a href="http://baidu.com">
-                            <span class="iconfont icon-search"></span>
-                        </a>
-                        
-                    </li>
-                    <li>
-                        <a href="#">
-                        <span class="iconfont icon-pin"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                        <span class="iconfont icon-Account"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                        <span class="iconfont icon-livechat"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                        <span class="iconfont icon-gouwudai"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="box box1">
-                <ul>
-                    <li class="li4">产品类型</li><br>
-                    <li class="li5">肌肤需求</li><br>
-                    <li class="li6">产品系列</li><br>
-                </ul>
-                <ul class="ul2">
-                        
-                </ul>
-                
-        </div>
-        <div class="box box2">
-            <ul>
-                <li class="li7">唇妆</li><br>
-                <li class="li8">底妆</li><br>
-                <li class="li9">眼妆</li><br>
-                <li class="li10">工具</li><br>
-            </ul>
-                <ul class="ul2">
-                        
-                </ul>
-        </div>
-        <div class="box box3">
-            <ul>
-                <li>当季活动</li><br>
-                <li>臻享礼盒</li><br>
-                <li>畅销榜单</li><br>
-                <li>护肤理念</li><br>
-                <li>新品上市</li><br>
-            </ul>
-        </div>
-    </nav>          
+	
+<!-- nav -->
+<div class="header">
+	
 </div>
-
 
 <!-- contain -->
 <div class="contain">
@@ -115,20 +37,20 @@
         </ul>
     </div>
 
-    <form action="regSave.php" method="POST" class="regForm">
-        <div class="formRow">
+    <form class="regForm">
+        <div class="formRow regRow">
             <span>手机</span>
             <span class="required">*</span>
             <br>
-            <input type="text" id="userTel" name="userTel" class="inputText"  onblur="checkuser(this)"><span style="font-size: 12px;"></span>
-            <span id="1"></span>
+            <input type="text" id="userTel" name="userTel"  class="inputText"><span style="font-size: 12px;"></span>
+            <span id="r1"></span>
         </div>
         <div class="formRow">
                 <span>姓名</span>
                 <span class="required">*</span>
                 <br>
-                <input type="text" id="userId" name="userId" class="inputText">
-                <span id="2"></span>
+                <input type="text" id="userId" name="userId" autocomplete="off" maxlength="8" class="inputText">
+                <span id="r2"></span>
         </div>
         <div class="widgets__img_check_box" id="select" style="width:400px;top:2px;">
             <p>拖动下方滑块完成拼图</p>                       
@@ -156,14 +78,14 @@
                     <input type="text" class="inputText verCode">
                     <div class="regBtn">
                         <div class="wrap">
-                            <button type="button" id="btnLogin" class="primary large data-field" style="display: none;">获取短信验证码</button>
+                            <button type="button" id="btnLogin" class="primary large data-field">获取短信验证码</button>
                         </div>
                     </div>
                 </div>
                 <span id="3"></span>
         </div>
         <div class="form1">
-            <div class="formRow">
+            <div class="formRow regRow">
                     <span>密码</span>
                     <span class="required">*</span>
                     <br>
@@ -185,7 +107,7 @@
         <div id="messageBox" style="width: 500px;color: #c8102e;text-align: center;"></div>
         <div class="centerer">
             <div class="wrap">
-                <button type="button" id="btn" class="primary large data-field" style="width: 330px;display: none;">立即注册</button>
+                <button type="button" id="btn" class="primary large data-field" style="width: 330px;disabled:true">立即注册</button>
             </div>
         </div>
     </form>
@@ -313,119 +235,145 @@
     </div>
 </body>
 </html>
-<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-<script src="js/nav.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 <script src="js/clickCheck.js"></script>
-<script src='js/jquery.min.js'></script>
 <script src="js/register.js"></script>
 
 <script>
 //手机号码判断 
- $('#userTel').blur(function() {
+ $('.regRow #userTel').blur(function() {
     let r=/^1[3,5,7,8,9]\d{9}$/;
     if($(this).val()==""){
-        $("#1").css({'color':'#c8102e','font-size':'12px'});
-        $("#1").text("请填写您的手机号");
+        $("#r1").css({'color':'#c8102e','font-size':'12px',fontSize:'14px'});
+        $("#r1").text("请输入一个有效的电话号码");
         }else{
-            $("#1").text("")
+            $("#r1").text("");
+		$(this).css({border:'1px solid #ccc'});
         }
     if (r.test($(this).val())){
-        $("#1").css({'color':'green','font-size':'12px'});
-        $("#1").text("手机号可以使用");
     }else{
-        $("#1").css({'color':'#c8102e','font-size':'12px'});
-        $("#1").text("请输入正确的手机号");
+		console.log(r.test($(this).val()));
+		$(this).css({border:"1px solid #c8102e"})
+        $("#r1").css({'color':'#c8102e','font-size':'14px'});
+        $("#r1").text("请输入一个有效的电话号码");
     }
    })
 
 // 姓名判断
    $('#userId').blur(function() {
-    let r=/^[\u4e00-\u9fa5]{0,}$/
+    let r=/^[a-zA-Z]{2,8}$/
     if($(this).val()==""){
-        $("#2").css({'color':'#c8102e','font-size':'12px'});
-        $("#2").text("请填写您的姓名");
+        $("#r2").css({'color':'#c8102e','font-size':'14px'});
+        $("#r2").text("请输入一个有效的姓");
         }else{
-            $("#2").text("")
+            $("#r2").text("");
+			$(this).css({border:'1px solid #ccc'});
         }
     if (r.test($(this).val())){
        
     }else{
-        $("#2").css({'color':'#c8102e','font-size':'12px'});
-        $("#2").text("请输入正确的姓名格式");
+		$(this).css({border:"1px solid #c8102e"})
+        $("#r2").css({'color':'#c8102e','font-size':'14px'});
+        $("#r2").text("请输入一个有效的姓");
     }
    })
+//获取验证码
+		var num = "";
+	$("#btnLogin").click(function(){
+		num = "";
+		for(var i=0;i<6;i++){
+			num += Math.floor(Math.random()*10);
+		}
+		alert(num);
+	})
 
 // 验证码判断
    $('.verCode').blur(function() {
        let r=/^\d{6}$/
     if($(this).val()==""){
-        $("#3").css({'color':'#c8102e','font-size':'12px'});
-        $("#3").text("请填写验证码");
+		$(this).css({border:"1px solid #c8102e"})
+        $("#3").css({'color':'#c8102e','font-size':'14px'});
+        $("#3").text("请输入一个有效的校验码");
+		
+        }else if($(this).val() != num){
+			$(this).css({border:"1px solid #c8102e"})
+			$("#3").css({'color':'#c8102e','font-size':'14px'});
+            $("#3").text("输入的校验码不正确")
         }else{
+			$(this).css({border:"1px solid #ccc"})
+			$("#3").css({'color':'#c8102e','font-size':'14px'});
             $("#3").text("")
-        }
+		}
     if (r.test($(this).val())){
        
     }else{
-        $("#3").css({'color':'#c8102e','font-size':'12px'});
-        $("#3").text("请输入正确的6位验证码");
+		$("#userTel").css({border:"1px solid #c8102e"})
+        $("#3").css({'color':'#c8102e','font-size':'14px'});
+        $("#3").text("输入的校验码不正确");
     }
    })
 
 // 密码判断   
-   $('#userpass').blur(function() {
-    let r=/^[a-zA-Z]\w{5,17}$/
+   $('.regRow #userpass').blur(function() {
+    let r=/^(?=.*[a-zA-Z])(?=.*\d)[^]{8,}$/
     if($(this).val()==""){
-        $("#4").css({'color':'#c8102e','font-size':'12px'});
-        $("#4").text("请填写您的密码");
+		$(this).css({border:"1px solid #c8102e"});
+        $("#4").css({'color':'#c8102e','font-size':'14px'});
+        $("#4").text("请输入一个有效的密码");
         }else{
-            $("#4").text("")
+            $("#4").text("");
+		$(this).css({border:"1px solid #ccc"});
         }
     if (r.test($(this).val())){
        
     }else{
-        $("#4").css({'color':'#c8102e','font-size':'12px'});
-        $("#4").text("密码以字母开头长度在6~18位之间，只能包含数字、字母及下划线");
+		$(this).css({border:"1px solid #c8102e"});
+        $("#4").css({'color':'#c8102e','font-size':'14px'});
+        $("#4").text("请输入一个有效的密码");
     }
    })
    $('#pwd_again').blur(function() {
         if($(this).val()==""){
-            $("#5").css({'color':'#c8102e','font-size':'12px'});
+            $("#5").css({'color':'#c8102e','font-size':'14px'});
             $("#5").text("请确认您的密码");
             }  
-    if($(this).val()!== $('#userpass').val()){
-            $("#5").css({'color':'#c8102e','font-size':'12px'});
-            $("#5").text("两次密码不同，请确认");
+    if($(this).val()!= $('.regRow #userpass').val()){
+			$(this).css({border:'1px solid #c8102e'});
+			$("#userpass").css({border:'1px solid #c8102e'});
+            $("#5").css({'color':'#c8102e','font-size':'14px'});
+            $("#5").text("密码不匹配");
         }else{
-            $("#5").remove()
+			$(this).css({border:'1px solid #ccc'});
+			$("#userpass").css({border:'1px solid #ccc'});
+            $("#5").text("")
         }
     })
         
 
 $("#btn").click(function(){ 
    
-    if($("#agree").is(":checked") && ($("#userTel").val()!=="") && ($("#userId").val()!=="") && ($("#userpass").val()!=="")){
+    if($("#agree").is(":checked") && ($(".regRow #userTel").val()!=="") && ($("#userId").val()!=="") && ($(".regRow #userpass").val()!=="")){
         //1、
-    let xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
 
-    xhr.open("post","regSave.php",true);
+    xhr.open("POST","regSave.php",true);
 
     xhr.onreadystatechange = function(){
         if(xhr.readyState==4 && xhr.status==200){
             if(xhr.responseText=="-1"){
-                $("#messageBox").css({'color':'#c8102e'});
-                $("#messageBox").text("请重新填写手机号");
+                $("#r1").css({'color':'#c8102e',fontSize:'14px'});
+                $("#r1").text("您的手机号已经被注册");
             }else if(xhr.responseText=="0"){
-                $("#messageBox").css({'color':'#c8102e'});
-                $("#messageBox").text("注册失败");
+                $(".regForm #messageBox").css({'color':'#c8102e'});
+                $(".regForm #messageBox").text("注册失败");
             }else if(xhr.responseText=="1"){
-                $("#messageBox").css({'color':'green'});
-                $("#messageBox").text("注册成功，正在跳转登录页面");
+                $(".regForm #messageBox").css({'color':'green'});
+                $(".regForm #messageBox").text("注册成功，正在跳转登录页面");
                 $(window).attr('location','checkout.html');
             }
         }
@@ -433,39 +381,41 @@ $("#btn").click(function(){
     //post方式：设置请求头
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
-    let sendstr = `userTel=${$("#userTel").val()}&userId=${$("#userId").val()}&userpass=${$("#userpass").val()}`;
+    let sendstr = `userTel=${$(".regRow #userTel").val()}&userId=${$("#userId").val()}&userpass=${$(".regRow #userpass").val()}`;
     xhr.send(sendstr);
     }else{
-        $("#messageBox").css({'color':'#c8102e'});
-        $("input").css({'border-color':'#c8102e'});
-        $("#messageBox").text("在递交此表格前，请先核对这部分内容");
+		$('input').each(function(){
+		    if ($.trim($(this).val()) == '') {
+		        $(this).css('border', '1px solid #c8102e');
+		    }
+			if ($("#agree").is(":checked")){
+				}else{
+					$(".formCheck").css('border', '1px solid #c8102e');
+					}
+		});
+		$(".regForm #messageBox").text("在递交此表格前，请先核对这部分内容");
+		// let that = $('input:empty');
+		// console.log(that);
+		// $(that).css({'border-color':'#c8102e'});
     }
     
 
 })
 
- 
-    function checkuser(obj){
-        
-if($('#userTel').val()!==""){
-        let xhr =new XMLHttpRequest();
+</script>
 
-        //2 设置请求参数
-        xhr.open("get","checkuser.php?userTel="+$("#userTel").val(),true);
+<!-- 按钮的点击事件 -->
+<script>
+	$(function(){
+		$("#btnLogin,#btn").attr({'disabled':'disabled'}).css({background:'#666'})
+		.hover().css({color:'white'});
+		
+	})
+</script>
 
-        //3 设置回调函数
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState==4 && xhr.status==200){
-                //5 接收请求
-                obj.nextElementSibling.innerHTML =  xhr.responseText;
-            }
-        }
-        //4 发送请求
-        xhr.send();
-
-    }   
-}
-
-
-
+<!-- 引用header -->
+<script>
+	$(function(){
+		$(".header").load("head.html");
+	})
 </script>

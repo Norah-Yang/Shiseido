@@ -24,32 +24,33 @@
     <div class="loginWrap">
         <div class="left">
             <h1>已注册用户登录</h1>
-            <form action="">
+            <form action="" id="login_form">
                 <div class="loginForm">
                     <div class="formRow">
                         <span>您的邮箱/手机</span>
                         <span class="required">*</span>
+						<span id="1" style="padding-left: 10px;"></span>
                         <br>
-                        <input type="text" id="userTel" name="userTel" class="inputText">
+                        <input type="text" id="userTel" name="userTel" autocomplete="off" class="inputText">
                     </div>
                     <div class="formRow">
                         <span>密码</span>
                         <span class="required">*</span>
+						<span id="2" style="padding-left: 10px;"></span>
                         <br>
                         <input type="password" id="userpass" name="userpass" class="inputText">
                     </div>
+					<div id="messageBox"></div>
                     <div class="rememberme">
                         <div class="formRow formRow1">
                             <label for="" class="formCheck">
-                                <input type="checkbox">
+                                <input type="checkbox" id="remPass">
                             </label>
                             <span>记住我</span>
                         </div>
                         <div class="forget">
                             <a href="#">忘记密码？</a>
                         </div>
-                        <div id="messageBox" style="color: #c8102e;">
-                            </div>
                     </div>
                     <div class="formRow">
                         <button type="button" id="btnLogin" class="primary large data-field">登录</button>
@@ -83,7 +84,7 @@
                 <span>-&nbsp;&nbsp;最新活动资讯</span><br>
                 <span>-&nbsp;&nbsp;收藏您喜爱的产品、文章</span>
             </div>
-                <a href="register.html" class="button primary large data-field">注册</a>
+			<a href="register.html" class="button">注册</a>
         </div>
     </div>
 </div>
@@ -95,39 +96,100 @@
 </div>
 </body>
 </html>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 <script>
-
-        $("#btnLogin").onclick = function(){
-            //1、
-            let xhr = new XMLHttpRequest();
-        
-            xhr.open("post","checkout.php",true);
-        
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState==4 && xhr.status==200){
-                    if(xhr.responseText=="1"){
-                        // addCookie("userTel",$("#userTel").value,7);
-                        location.href="index.html";
-                    }else{
-                        $("#messageBox").innerHTML = "用户名或者密码不对";
-                    }
-                }
-            }
-            //post方式：设置请求头
-            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
-            let sendstr = `userTel=${$("#userTel").value}&userpass=${$("#userpass").value}`;
-            xhr.send(sendstr);
-        }
-        
-        function $(str){
-            if(str.charAt(0)=="#"){
-                return document.getElementById(str.substring(1));
-            }else if(str.charAt(0)=="."){
-                return document.getElementsByClassName(str.substring(1));
-            }else{
-                return document.getElementsByTagName(str);
-            }
-        }	
-        
-        </script>
+	//手机号判断 
+	$("#userTel").blur(function(){
+		let r=/^1[3,5,7,8,9]\d{9}$/;
+		if($(this).val()==""){
+		    $("#1").css({'color':'#c8102e','font-size':'12px',fontSize:'14px'});
+		    $("#1").text("请输入一个有效的电话号码");
+			$("#btnLogin").attr({'disabled':'disabled'}).css({background:'#666'})
+			.hover().css({color:'white'});
+		    }else{
+		        $("#1").text("");
+			$(this).css({border:'1px solid #ccc'});
+			$("#btnLogin").removeAttr('disabled').css({background:'black',color:'white'}).hover(function(){
+				$(this).css({background:'white',color:'black'});
+			},function(){
+				$(this).css({background:'black',color:'white'});
+			})
+		    }
+		if (r.test($(this).val())){
+		}else{
+			$("#userTel").css({border:"1px solid #c8102e"})
+		    $("#1").css({'color':'#c8102e','font-size':'14px'});
+		    $("#1").text("请输入一个有效的电话号码");
+			$("#btnLogin").attr({'disabled':'disabled'}).css({background:'#666',borderColor:'#666'})
+			.hover().css({color:'white'});
+		}
+	})
+	//密码判断
+	$("#userpass").blur(function(){
+		if($(this).val()==""){
+			$("#2").css({'color':'#c8102e','font-size':'12px',fontSize:'14px'});
+			$("#2").text("请输入一个有效的密码");
+			$(this).css({border:'1px solid #c8102e'});
+			$("#btnLogin").attr({'disabled':'disabled'}).css({background:'#666',borderColor:'#666'})
+			.hover().css({color:'white'});
+		}else{
+			$("#2").text("");
+			$(this).css({border:'1px solid #ccc'});
+			$("#btnLogin").removeAttr('disabled').css({background:'black',color:'white'}).hover(function(){
+				$(this).css({background:'white',color:'black'});
+			},function(){
+				$(this).css({background:'black',color:'white'});
+			})
+			
+		}
+	})
+	
+	//登陆
+	$('#btnLogin').click(function(){
+		var isChecked = $("#remPass").is(":checked");//选中时为true,未选中时为false/
+		
+		if(isChecked == true){
+			
+				let xhr = new XMLHttpRequest();		        
+				xhr.open("post","checkout.php",true);					
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						if(xhr.responseText=="1"){
+							$.cookie('userTel',$('#userTel').val(),{expires:7,path:'/'});
+							window.location.href="index.html";
+						}else{
+							$("input").css({border:'1px solid #c8102e'});
+							$("#messageBox").html("用户名或者密码错误");
+						}
+					}
+				}
+				//post方式：设置请求头
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				//post方式：把传给服务器端数据（键值对）放在send函数的参数里。
+				let sendstr = `userTel=${$("#userTel").val()}&userpass=${$("#userpass").val()}`;
+				xhr.send(sendstr);
+		}else{
+			let xhr = new XMLHttpRequest();		        
+				xhr.open("post","checkout.php",true);					
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						if(xhr.responseText=="1"){
+							$.cookie('userTel',$('#userTel').val());
+							window.location.href="index.html";
+						}else{
+							$("input").css({border:'1px solid #c8102e'});
+							$("#messageBox").html("用户名或者密码错误");
+						}
+					}
+				}
+				//post方式：设置请求头
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				//post方式：把传给服务器端数据（键值对）放在send函数的参数里。
+				let sendstr = `userTel=${$("#userTel").val()}&userpass=${$("#userpass").val()}`;
+				xhr.send(sendstr);
+		}
+	});
+	 
+	 //没有写事件
+</script>

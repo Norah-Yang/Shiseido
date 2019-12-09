@@ -1,0 +1,308 @@
+@charset "UTF-8";
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, hr, td, input, textarea {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+body {
+  font-family: "微软雅黑"; }
+
+.cartEmpty {
+  width: 100%;
+  margin: 108px auto;
+  display: none; }
+  .cartEmpty h1 {
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 600; }
+  .cartEmpty p {
+    margin-top: 24px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-weight: lighter; }
+  .cartEmpty .all {
+    display: flex; }
+  .cartEmpty .emptyTent {
+    width: 49%;
+    margin-top: 90px; }
+    .cartEmpty .emptyTent a {
+      display: block;
+      width: 400px;
+      position: relative;
+      margin: 0 auto; }
+      .cartEmpty .emptyTent a .knowNow {
+        font-size: 30px;
+        color: #000;
+        text-align: left;
+        border-bottom: 2px solid #c8102e;
+        float: left;
+        margin-bottom: 6px; }
+      .cartEmpty .emptyTent a .konwMsg {
+        text-align: left;
+        display: inline-block;
+        color: #000;
+        width: 100%; }
+      .cartEmpty .emptyTent a .iconfont {
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        font-size: 40px;
+        color: black; }
+      .cartEmpty .emptyTent a:hover {
+        opacity: .7; }
+  .cartEmpty .continueLink {
+    margin: 90px auto;
+    border-right: 1px solid #666; }
+    .cartEmpty .continueLink a {
+      padding-left: 140px; }
+  .cartEmpty .continueClp {
+    padding-left: 15px; }
+    .cartEmpty .continueClp a {
+      width: 418px; }
+
+.shoppingCar {
+  width: 100%; }
+  .shoppingCar .cartTop {
+    margin: 49.5px 0 5px;
+    display: flex; }
+    .shoppingCar .cartTop h1 {
+      width: 100%;
+      font-size: 80px;
+      margin-left: 6.25%;
+      padding-left: 10px;
+      padding-right: 10px;
+      line-height: 80px;
+      font-weight: 600; }
+    .shoppingCar .cartTop .preLink {
+      width: 100%;
+      text-align: right;
+      padding: 12.6px 10px 0;
+      margin-left: 18.75%;
+      padding-right: 12.75%; }
+      .shoppingCar .cartTop .preLink a {
+        font-size: 18px;
+        color: black; }
+        .shoppingCar .cartTop .preLink a:hover {
+          text-decoration: none; }
+  .shoppingCar .cartItem {
+    font-size: 34px;
+    font-weight: 400;
+    margin-top: 68px;
+    margin-left: 6.25%;
+    padding: 0 10px;
+    width: 50%; }
+    .shoppingCar .cartItem .quantity {
+      padding-bottom: 14px;
+      border-bottom: 8px solid #000; }
+  .shoppingCar form {
+    display: flex; }
+    .shoppingCar form .leftColumn {
+      width: 50%;
+      padding-top: 65px;
+      margin-left: 6.25%; }
+      .shoppingCar form .leftColumn .goods {
+        margin-top: 50px; }
+      .shoppingCar form .leftColumn .list {
+        display: flex; }
+        .shoppingCar form .leftColumn .list div {
+          padding: 0 10px; }
+        .shoppingCar form .leftColumn .list .itemImg {
+          width: 211.3px; }
+          .shoppingCar form .leftColumn .list .itemImg img {
+            width: 100%; }
+        .shoppingCar form .leftColumn .list .itemDetails .name {
+          font-size: 17px;
+          font-weight: 700;
+          padding: 0 10px;
+          margin-bottom: 5px; }
+        .shoppingCar form .leftColumn .list .itemDetails .size {
+          font-size: 14px; }
+        .shoppingCar form .leftColumn .list .itemNum select {
+          font-size: 14px;
+          outline: none;
+          border: none;
+          width: 60px;
+          text-align-last: center; }
+          .shoppingCar form .leftColumn .list .itemNum select option {
+            border: none; }
+        .shoppingCar form .leftColumn .list .itemPrice {
+          font-size: 14px; }
+        .shoppingCar form .leftColumn .list .price {
+          display: none; }
+    .shoppingCar form .cartLink {
+      margin-left: 38.5%; }
+      .shoppingCar form .cartLink a {
+        font-size: 14px;
+        color: black;
+        margin-left: 40px; }
+        .shoppingCar form .cartLink a .iconfont {
+          font-size: 25px;
+          color: #ccc;
+          margin-right: 5px;
+          vertical-align: middle; }
+        .shoppingCar form .cartLink a:hover {
+          text-decoration: none;
+          opacity: .7; }
+        .shoppingCar form .cartLink a:nth-child(1) {
+          margin-left: 0; }
+    .shoppingCar form .rightColumn {
+      margin-left: 5.6%;
+      margin-bottom: 240px;
+      width: 430px;
+      background: #000000;
+      position: relative; }
+      .shoppingCar form .rightColumn .imgStat img {
+        width: 83px;
+        position: absolute;
+        top: -41px;
+        left: 173px;
+        right: 0; }
+      .shoppingCar form .rightColumn .totalContain {
+        padding: 30px 20px 0;
+        margin-top: 33px; }
+        .shoppingCar form .rightColumn .totalContain h3 {
+          margin-bottom: 34px;
+          font-size: 18px;
+          font-weight: 700;
+          color: white; }
+        .shoppingCar form .rightColumn .totalContain .totalSub, .shoppingCar form .rightColumn .totalContain .shipping {
+          margin-bottom: 14px;
+          font-size: 18px;
+          color: #ccc;
+          height: 21px; }
+          .shoppingCar form .rightColumn .totalContain .totalSub dt, .shoppingCar form .rightColumn .totalContain .shipping dt {
+            float: left;
+            font-weight: 400; }
+          .shoppingCar form .rightColumn .totalContain .totalSub dd, .shoppingCar form .rightColumn .totalContain .shipping dd {
+            float: right;
+            font-weight: 400; }
+        .shoppingCar form .rightColumn .totalContain .totalPrice {
+          margin-top: 27px;
+          padding: 36px 0;
+          border-top: 1px solid #666;
+          border-bottom: 1px solid #666;
+          display: flex;
+          justify-content: space-between; }
+          .shoppingCar form .rightColumn .totalContain .totalPrice dt {
+            font-size: 18px;
+            color: white;
+            font-weight: 700;
+            height: 21px; }
+          .shoppingCar form .rightColumn .totalContain .totalPrice dd {
+            font-size: 18px;
+            color: white;
+            height: 21px; }
+        .shoppingCar form .rightColumn .totalContain .cartAction {
+          padding: 20px; }
+          .shoppingCar form .rightColumn .totalContain .cartAction button {
+            height: 48px;
+            width: 100%;
+            background: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 600; }
+      .shoppingCar form .rightColumn .carFoot {
+        width: 100%;
+        position: absolute;
+        bottom: -30px; }
+        .shoppingCar form .rightColumn .carFoot img {
+          width: 100%; }
+
+/* 底部 */
+.footer {
+  width: 100%;
+  height: 515px;
+  background: #000000; }
+
+.footer .lay1 {
+  width: 1147px;
+  margin: 0 auto;
+  padding: 53px 0 50px;
+  border-bottom: 1px solid #666; }
+
+.footer .title {
+  margin-bottom: 60px;
+  margin-top: 10px; }
+
+.footer .title h3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #ccc; }
+
+.footer .row {
+  display: flex;
+  justify-content: center;
+  margin-right: -10px;
+  margin-left: -10px; }
+
+.lay1 .contains {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.footer .lay1 a {
+  color: #ccc;
+  font-size: 16px;
+  display: inline-block; }
+
+.footer a:hover {
+  text-decoration: none;
+  opacity: .7; }
+
+.footer i {
+  color: #ccc;
+  font-size: 28px;
+  vertical-align: middle; }
+
+.footer .lay1 span {
+  margin-left: 8px;
+  color: #ccc; }
+
+.tel {
+  margin-left: 20px; }
+
+.tel span {
+  letter-spacing: 3px; }
+
+.lay2 {
+  width: 1147px;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 59px; }
+
+.lay2 h5 {
+  font-size: 16px;
+  padding-bottom: 27px;
+  font-weight: bolder;
+  color: #666; }
+
+.lay2 a {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #666; }
+
+.lay2 .contains {
+  text-align: center; }
+
+.footer .lay3 {
+  text-align: center; }
+
+.footer .lay3 a {
+  color: #666;
+  margin-left: 10px; }
+
+.footer .lay3 span {
+  color: #666;
+  margin-left: 10px; }

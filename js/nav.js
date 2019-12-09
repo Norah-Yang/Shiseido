@@ -1,9 +1,12 @@
+
 $(document).ready(function(){
     var hoverTimer, outTimer;
+	
+	
     $('.li1').hover(function() {
         clearTimeout(outTimer);
         hoverTimer = window.setTimeout(function(){
-        $(".box1").show();
+        $(".box1").show()
         },500);
     }, function() {
         clearTimeout(hoverTimer);
@@ -15,10 +18,10 @@ $(document).ready(function(){
     $('.box1').hover(function() {
         clearTimeout(outTimer);
         hoverTimer = window.setTimeout(function(){
-        $(this).show();
-        },500);
+        $('.ul2').show();
+        },1000);
     }, function() {
-       $(this).hide();
+       $('.ul2').hide();
     });
 })
 
@@ -54,7 +57,7 @@ $(document).ready(function(){
         clearTimeout(outTimer);
         hoverTimer = window.setTimeout(function(){
         $(".box3").show();
-        },500);
+        },300);
     }, function() {
         clearTimeout(hoverTimer);
         outTimer = window.setTimeout(function(){
@@ -82,9 +85,9 @@ $(".li4").hover(function(){
         <a href="#">眼唇护理</a><br>
         <a href="#">面膜</a><br>
         <a href="#">防护隔离</a>`
-    );
+    )
 },function(){
-    $(".ul2").hide();
+    // $(".ul2").hide();
 })
 
 $(".li5").hover(function(){
@@ -99,7 +102,7 @@ $(".li5").hover(function(){
         <a href="#">防护隔离</a><br>`
     )
 },function(){
-    $(".ul2").hide();
+    // $(".ul2").hide();
 })
 
 $(".li6").hover(function(){
@@ -113,10 +116,10 @@ $(".li6").hover(function(){
         <a href="#">盼丽风姿系列</a><br>
         <a href="#">红色蜜露</a><br>
         <a href="#">智感赋活系列</a><br>
-        <a href="#">青春日和系列</a><br>`
+        <a href="overview.html">青春日和系列</a><br>`
     )
 },function(){
-    $(".ul2").hide();
+    // $(".ul2").hide();
 })
 
 $(".li7").hover(function(){
@@ -126,7 +129,7 @@ $(".li7").hover(function(){
         <a href="#">唇线笔</a><br>`
     )
 },function(){
-    $(".ul2").hide();
+    // $(".ul2").hide();
 })
 
 $(".li8").hover(function(){
@@ -140,7 +143,7 @@ $(".li8").hover(function(){
         <a href="#">高光</a><br>`
     )
 },function(){
-    $(".ul2").hide();
+    // $(".ul2").hide();
 })
 
 
@@ -152,7 +155,7 @@ $(".li9").hover(function(){
         <a href="#">眉笔</a><br>`
     )
 },function(){
-    $(".ul2").hide();
+    // $(".ul2").hide();
 })
 
 $(".li10").hover(function(){
@@ -161,7 +164,5 @@ $(".li10").hover(function(){
         <a href="#">其他</a><br>`
     )
 },function(){
-    $(".ul2").hide();
+    // $(".ul2").hide();
 })
-
-
